@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Freelance Social Media Ghostwriter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+</head>
+<body style="display:flex; min-height:100vh; align-items:center; justify-content:center; background:var(--bg-color);">
+
+    <div class="container" style="max-width:1000px; padding:2rem;">
+        <div class="card" style="padding:0; overflow:hidden; border:none; box-shadow:var(--shadow);">
+            <div class="grid-2" style="gap:0;">
+                <!-- LEFT SIDE (IMG) -->
+                <div style="background:var(--gradient); padding:3rem; color:#fff; display:flex; flex-direction:column; justify-content:center;">
+                    <a href="index.html" class="logo" style="color:#fff; margin-bottom:2rem; font-size:2rem;">
+                        <i class="fa-solid fa-pen-nib"></i>
+                        Ghost<span style="color:rgba(255,255,255,0.8);">Writer</span>
+                    </a>
+                    <h2 style="color:#fff; font-size:2.5rem; margin-bottom:1rem;">Welcome Back</h2>
+                    <p style="font-size:1.125rem; opacity:0.9;">Log in to access your dashboard, review pending drafts, and track your latest analytics.</p>
+                </div>
+                
+                <!-- RIGHT SIDE (FORM) -->
+                <div style="padding:3rem; background:var(--card-bg);">
+                    <div style="display:flex; justify-content:flex-end; gap:1rem; margin-bottom:2rem;">
+                        <button class="theme-toggle" aria-label="Toggle Dark Mode" style="border:1px solid var(--border); background:transparent; color:var(--text-color); font-size:1.25rem; padding:0.5rem; border-radius:50%;">
+                            <i class="fa-solid fa-moon"></i>
+                            <i class="fa-solid fa-sun" style="display:none;"></i>
+                        </button>
+                        <button class="rtl-toggle" aria-label="Toggle RTL" style="border:1px solid var(--border); background:transparent; color:var(--text-color); font-size:1.25rem; padding:0.5rem; border-radius:50%;">
+                            <i class="fa-solid fa-right-left"></i>
+                        </button>
+                    </div>
+                    
+                    <h3 style="font-size:1.5rem; margin-bottom:2rem;">Sign In</h3>
+                    
+                    <form action="dashboard.html">
+                        <div class="form-group">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-control" placeholder="you@company.com" required>
+                        </div>
+                        <div class="form-group" style="position:relative;">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control" placeholder="••••••••" required>
+                            <i class="fa-solid fa-eye toggle-password" style="position:absolute; right:1rem; top:2.5rem; cursor:pointer; color:var(--gray);"></i>
+                        </div>
+                        
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:2rem;">
+                            <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer;">
+                                <input type="checkbox"> Remember me
+                            </label>
+                            <a href="#" style="font-size:0.875rem;">Forgot Password?</a>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width:100%; margin-bottom:1rem;">Log In</button>
+                        
+                        <div style="text-align:center; color:var(--gray); margin-bottom:1rem;">or continue with</div>
+                        
+                        <div style="display:flex; gap:1rem;">
+                            <button type="button" class="btn btn-outline" style="flex:1;"><i class="fa-brands fa-linkedin" style="color:#0a66c2;"></i> LinkedIn</button>
+                            <button type="button" class="btn btn-outline" style="flex:1;"><i class="fa-brands fa-google" style="color:#ea4335;"></i> Google</button>
+                        </div>
+                        
+                        <p style="text-align:center; margin-top:2rem;">Don't have an account? <a href="register.html">Sign up</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon - Freelance Social Media Ghostwriter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+</head>
+<body style="background:var(--dark); color:#fff; display:flex; align-items:center; justify-content:center; min-height:100vh; overflow:hidden; position:relative;">
+
+    <!-- ANIMATED BACKGROUND -->
+    <div style="position:absolute; top:-50%; left:-50%; width:200%; height:200%; background:var(--gradient); opacity:0.1; animation:spin 20s linear infinite; z-index:-1;"></div>
+    
+    <style>
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+    </style>
+
+    <div class="container text-center" style="max-width:800px; z-index:1;">
+        <a href="index.html" class="logo" style="color:#fff; justify-content:center; margin-bottom:3rem; font-size:2rem;">
+            <i class="fa-solid fa-pen-nib"></i>
+            Ghost<span style="color:var(--primary);">Writer</span>
+        </a>
+        
+        <h1 style="font-size:4rem; margin-bottom:1rem;">We're Launching Soon</h1>
+        <p style="font-size:1.25rem; color:var(--gray); margin-bottom:3rem;">The ultimate executive branding platform is almost ready. Join the waitlist to get early access.</p>
+        
+        <!-- COUNTDOWN -->
+        <div style="display:flex; justify-content:center; gap:2rem; margin-bottom:4rem;">
+            <div class="card" style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); padding:1.5rem; min-width:120px;">
+                <h2 style="font-size:3rem; margin:0; color:var(--primary);">14</h2>
+                <span style="color:var(--gray); text-transform:uppercase; font-size:0.875rem; letter-spacing:1px;">Days</span>
+            </div>
+            <div class="card" style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); padding:1.5rem; min-width:120px;">
+                <h2 style="font-size:3rem; margin:0; color:var(--primary);">08</h2>
+                <span style="color:var(--gray); text-transform:uppercase; font-size:0.875rem; letter-spacing:1px;">Hours</span>
+            </div>
+            <div class="card" style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); padding:1.5rem; min-width:120px;">
+                <h2 style="font-size:3rem; margin:0; color:var(--primary);">45</h2>
+                <span style="color:var(--gray); text-transform:uppercase; font-size:0.875rem; letter-spacing:1px;">Mins</span>
+            </div>
+        </div>
+
+        <div style="max-width:500px; margin:0 auto 3rem;">
+            <form style="display:flex; gap:0.5rem;">
+                <input type="email" class="form-control" placeholder="Enter your email address" style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); color:#fff;" required>
+                <button type="submit" class="btn btn-primary">Notify Me</button>
+            </form>
+        </div>
+
+        <div class="social-icons" style="justify-content:center;">
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+
+</body>
+</html>

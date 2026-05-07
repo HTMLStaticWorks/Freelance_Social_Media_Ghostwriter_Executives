@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Freelance Social Media Ghostwriter</title>
+    <meta name="description" content="Get in touch with our team.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-pen-nib"></i>
+                Ghost<span>Writer</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="home-2.html">Home 2</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="blog.html">Blog</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html" class="active">Contact</a>
+                <a href="dashboard.html">Dashboard</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fa-solid fa-moon"></i>
+                    <i class="fa-solid fa-sun" style="display:none;"></i>
+                </button>
+                <button class="rtl-toggle" aria-label="Toggle RTL">
+                    <i class="fa-solid fa-right-left"></i>
+                </button>
+                <a href="login.html" class="btn btn-outline" style="padding: 0.5rem 1rem; border: 2px solid var(--primary); color: var(--primary);">Login</a>
+                <button class="mobile-menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTACT HERO -->
+    <div class="page-header" style="padding-bottom:0;">
+        <div class="container">
+            <h1>Get in Touch</h1>
+            <p class="section-subtitle">Ready to elevate your executive brand? Drop us a line.</p>
+        </div>
+    </div>
+
+    <!-- CONTACT FORM & INFO -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="grid-2">
+                <div class="card" style="padding:3rem;">
+                    <h2 class="mb-4">Send a Message</h2>
+                    <form>
+                        <div class="form-group">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Work Email</label>
+                            <input type="email" class="form-control" placeholder="john@company.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">LinkedIn Profile URL</label>
+                            <input type="url" class="form-control" placeholder="https://linkedin.com/in/..." required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control" rows="5" placeholder="How can we help you scale?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;">Submit Inquiry</button>
+                    </form>
+                </div>
+                
+                <div>
+                    <div class="card mb-4" style="background:var(--primary); color:#fff; border:none;">
+                        <h3 style="color:#fff;"><i class="fa-solid fa-envelope mb-4" style="font-size:2rem;"></i><br>Email Us</h3>
+                        <p>hello@ghostwriter.com</p>
+                    </div>
+                    <div class="card mb-4" style="background:var(--accent); color:#fff; border:none;">
+                        <h3 style="color:#fff;"><i class="fa-solid fa-phone mb-4" style="font-size:2rem;"></i><br>Call Us</h3>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                    <div class="card" style="border:none;">
+                        <h3 class="card-title">Headquarters</h3>
+                        <p class="card-text">100 Innovation Drive<br>San Francisco, CA 94103</p>
+                        <!-- MAP PLACEHOLDER -->
+                        <div style="width:100%; height:200px; background:var(--glass); border-radius:1rem; display:flex; align-items:center; justify-content:center; border:1px solid var(--border);">
+                            <i class="fa-solid fa-map-location-dot" style="font-size:3rem; color:var(--gray);"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-widget">
+                    <a href="index.html" class="logo" style="color:#fff; margin-bottom:1.5rem;">
+                        <i class="fa-solid fa-pen-nib"></i>
+                        Ghost<span style="color:var(--primary);">Writer</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

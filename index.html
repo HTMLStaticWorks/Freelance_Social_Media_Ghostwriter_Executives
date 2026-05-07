@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Freelance Social Media Ghostwriter</title>
+    <meta name="description" content="Premium SaaS + Executive Branding + Social Media Analytics Platform">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-pen-nib"></i>
+                Ghost<span>Writer</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="home-2.html">Home 2</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="blog.html">Blog</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html">Contact</a>
+                <a href="dashboard.html">Dashboard</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fa-solid fa-moon"></i>
+                    <i class="fa-solid fa-sun" style="display:none;"></i>
+                </button>
+                <button class="rtl-toggle" aria-label="Toggle RTL">
+                    <i class="fa-solid fa-right-left"></i>
+                </button>
+                <a href="login.html" class="btn btn-outline" style="padding: 0.5rem 1rem; border: 2px solid var(--primary); color: var(--primary);">Login</a>
+                <button class="mobile-menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. HERO SECTION -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Elevate Your <br><span style="color:var(--primary)">Executive Brand</span></h1>
+                <p>The premium ghostwriting and analytics platform for CEOs, Founders, and LinkedIn Influencers. Scale
+                    your voice, effortlessly.</p>
+                <div class="hero-btns">
+                    <a href="pricing.html" class="btn btn-primary">Start Your Journey <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                    <a href="services.html" class="btn btn-outline">Explore Services</a>
+                </div>
+                <div style="margin-top:2rem; display:flex; align-items:center; gap:1rem; color:var(--gray);">
+                    <div style="display:flex;">
+                        <i class="fa-solid fa-star" style="color:#fbbf24;"></i>
+                        <i class="fa-solid fa-star" style="color:#fbbf24;"></i>
+                        <i class="fa-solid fa-star" style="color:#fbbf24;"></i>
+                        <i class="fa-solid fa-star" style="color:#fbbf24;"></i>
+                        <i class="fa-solid fa-star" style="color:#fbbf24;"></i>
+                    </div>
+                    <span>Trusted by 500+ Executives</span>
+                </div>
+            </div>
+            <div class="hero-img-wrap">
+                <img src="assets/images/home-hero.png" alt="Executive Branding Dashboard">
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. STATS SECTION (4 cards) -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="grid-4">
+                <div class="card text-center stats-card">
+                    <i class="fa-solid fa-users mb-4" style="font-size:2.5rem; color:var(--primary);"></i>
+                    <h2 class="counter" data-target="250">0</h2>
+                    <p class="card-text" style="margin:0;">Active CEOs</p>
+                </div>
+                <div class="card text-center stats-card">
+                    <i class="fa-solid fa-chart-line mb-4" style="font-size:2.5rem; color:var(--primary);"></i>
+                    <h2 class="counter" data-target="15">0</h2>
+                    <p class="card-text" style="margin:0;">Avg. Growth (%)</p>
+                </div>
+                <div class="card text-center stats-card">
+                    <i class="fa-solid fa-pen-fancy mb-4" style="font-size:2.5rem; color:var(--primary);"></i>
+                    <h2 class="counter" data-target="10000">0</h2>
+                    <p class="card-text" style="margin:0;">Posts Written</p>
+                </div>
+                <div class="card text-center stats-card">
+                    <i class="fa-solid fa-eye mb-4" style="font-size:2.5rem; color:var(--primary);"></i>
+                    <h2 class="counter" data-target="50">0</h2>
+                    <p class="card-text" style="margin:0;">Million Impressions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SERVICES SECTION (4 cards) -->
+    <section class="section-padding" style="background:var(--card-bg);">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Premium Services</h2>
+                <p class="section-subtitle">Tailored solutions to amplify your professional voice across all networks.
+                </p>
+            </div>
+            <div class="grid-4">
+                <div class="card card-flush">
+                    <div class="card-img-wrap">
+                        <img src="assets/images/blog-thumb.png" alt="Ghostwriting">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Executive Ghostwriting</h3>
+                        <p class="card-text">Flawless, engaging content written in your unique voice for maximum impact.
+                        </p>
+                        <div class="card-footer">
+                            <a href="services-details.html" class="btn btn-outline" style="width:100%;">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-flush">
+                    <div class="card-img-wrap">
+                        <img src="assets/images/dashboard-mockup.png" alt="Brand Strategy">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Brand Strategy</h3>
+                        <p class="card-text">Comprehensive roadmaps to position you as an industry thought leader.</p>
+                        <div class="card-footer">
+                            <a href="services-details.html" class="btn btn-outline" style="width:100%;">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-flush">
+                    <div class="card-img-wrap">
+                        <img src="assets/images/blog-thumb.png" alt="Content Management">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Content Pipeline</h3>
+                        <p class="card-text">End-to-end management of your publishing schedule and asset creation.</p>
+                        <div class="card-footer">
+                            <a href="services-details.html" class="btn btn-outline" style="width:100%;">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-flush">
+                    <div class="card-img-wrap">
+                        <img src="assets/images/dashboard-mockup.png" alt="Analytics Reporting">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Analytics & Reporting</h3>
+                        <p class="card-text">Deep-dive insights into audience growth, engagement rates, and ROI.</p>
+                        <div class="card-footer">
+                            <a href="services-details.html" class="btn btn-outline" style="width:100%;">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. CASE STUDIES (4 cards) -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Client Growth Results</h2>
+                <p class="section-subtitle">Real metrics from executives who scaled their influence.</p>
+            </div>
+            <div class="grid-4">
+                <div class="card text-center">
+                    <div class="card-content">
+                        <div style="font-size:2rem; font-weight:800; color:var(--primary); margin-bottom:1rem;">+340%
+                        </div>
+                        <h3 class="card-title">Audience Increase</h3>
+                        <p class="card-text">Tech CEO grew their LinkedIn following from 5k to 22k in 6 months.</p>
+                    </div>
+                </div>
+                <div class="card text-center">
+                    <div class="card-content">
+                        <div style="font-size:2rem; font-weight:800; color:var(--primary); margin-bottom:1rem;">2.5M
+                        </div>
+                        <h3 class="card-title">Monthly Impressions</h3>
+                        <p class="card-text">Startup Founder achieved massive organic reach consistently.</p>
+                    </div>
+                </div>
+                <div class="card text-center">
+                    <div class="card-content">
+                        <div style="font-size:2rem; font-weight:800; color:var(--primary); margin-bottom:1rem;">+85%
+                        </div>
+                        <h3 class="card-title">Engagement Rate</h3>
+                        <p class="card-text">Agency Owner saw dramatic increase in meaningful conversations.</p>
+                    </div>
+                </div>
+                <div class="card text-center">
+                    <div class="card-content">
+                        <div style="font-size:2rem; font-weight:800; color:var(--primary); margin-bottom:1rem;">12x
+                        </div>
+                        <h3 class="card-title">Lead Generation</h3>
+                        <p class="card-text">Consultant generated record inbound leads via targeted posts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. TESTIMONIALS (4 cards) -->
+    <section class="section-padding" style="background:var(--card-bg);">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Executive Reviews</h2>
+                <p class="section-subtitle">What our premium clients say about the platform.</p>
+            </div>
+            <div class="grid-4">
+                <div class="card">
+                    <div style="color:#fbbf24; margin-bottom:1rem;">★★★★★</div>
+                    <p class="card-text">"The dashboard makes reviewing content a breeze. My voice is captured
+                        perfectly."</p>
+                    <div style="display:flex; align-items:center; gap:1rem;">
+                        <img src="assets/images/avatar.png"
+                            style="width:50px; height:50px; border-radius:50%; object-fit:cover;">
+                        <div>
+                            <h4 style="margin:0; font-size:1rem;">Michael Chen</h4>
+                            <span style="color:var(--gray); font-size:0.875rem;">CEO, TechFlow</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div style="color:#fbbf24; margin-bottom:1rem;">★★★★★</div>
+                    <p class="card-text">"I saved 10 hours a week and my LinkedIn engagement tripled. Incredible
+                        service."</p>
+                    <div style="display:flex; align-items:center; gap:1rem;">
+                        <img src="assets/images/avatar.png"
+                            style="width:50px; height:50px; border-radius:50%; object-fit:cover;">
+                        <div>
+                            <h4 style="margin:0; font-size:1rem;">Sarah Jenkins</h4>
+                            <span style="color:var(--gray); font-size:0.875rem;">Founder, Elevate</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div style="color:#fbbf24; margin-bottom:1rem;">★★★★★</div>
+                    <p class="card-text">"The analytics reporting is enterprise-grade. I know exactly what's working."
+                    </p>
+                    <div style="display:flex; align-items:center; gap:1rem;">
+                        <img src="assets/images/avatar.png"
+                            style="width:50px; height:50px; border-radius:50%; object-fit:cover;">
+                        <div>
+                            <h4 style="margin:0; font-size:1rem;">David Ross</h4>
+                            <span style="color:var(--gray); font-size:0.875rem;">Managing Partner</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div style="color:#fbbf24; margin-bottom:1rem;">★★★★★</div>
+                    <p class="card-text">"Premium quality writing that feels 100% authentic to my personal brand."</p>
+                    <div style="display:flex; align-items:center; gap:1rem;">
+                        <img src="assets/images/avatar.png"
+                            style="width:50px; height:50px; border-radius:50%; object-fit:cover;">
+                        <div>
+                            <h4 style="margin:0; font-size:1rem;">Elena Rodriguez</h4>
+                            <span style="color:var(--gray); font-size:0.875rem;">CMO, GlobalReach</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. CTA + NEWSLETTER -->
+    <section class="section-padding" style="position:relative; overflow:hidden;">
+        <div
+            style="position:absolute; top:0; left:0; width:100%; height:100%; background:var(--gradient); opacity:0.1; z-index:-1;">
+        </div>
+        <div class="container text-center">
+            <h2 class="section-title">Ready to Dominate Your Industry?</h2>
+            <p class="section-subtitle">Join 500+ executives who are building massive influence on autopilot.</p>
+
+            <div style="max-width:500px; margin:0 auto 2rem;">
+                <form class="newsletter-form"
+                    style="background:var(--card-bg); padding:0.5rem; border-radius:0.75rem; box-shadow:var(--shadow);">
+                    <input type="email" placeholder="Enter your work email"
+                        style="border:none; background:transparent; color:var(--text-color); outline:none;" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+
+            <a href="pricing.html" class="btn btn-primary" style="font-size:1.125rem; padding:1rem 2rem;">Book a
+                Consultation</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-widget">
+                    <a href="index.html" class="logo" style="color:#fff; margin-bottom:1.5rem;">
+                        <i class="fa-solid fa-pen-nib"></i>
+                        Ghost<span style="color:var(--primary);">Writer</span>
+                    </a>
+                    <p style="color:var(--gray); margin-bottom:1.5rem;">The premium platform for executive branding and
+                        content analytics.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-widget">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services-details.html">Executive Ghostwriting</a></li>
+                        <li><a href="services-details.html">Brand Strategy</a></li>
+                        <li><a href="services-details.html">Content Management</a></li>
+                        <li><a href="services-details.html">Analytics Reporting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li style="color:var(--gray);"><i class="fa-solid fa-envelope" style="margin-right:0.5rem;"></i>
+                            hello@ghostwriter.com</li>
+                        <li style="color:var(--gray);"><i class="fa-solid fa-phone" style="margin-right:0.5rem;"></i> +1
+                            (555) 123-4567</li>
+                        <li style="color:var(--gray);"><i class="fa-solid fa-location-dot"
+                                style="margin-right:0.5rem;"></i> 100 Innovation Drive, SF</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Freelance Social Media Ghostwriter. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

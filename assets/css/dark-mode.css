@@ -1,0 +1,79 @@
+/* ==========================================================================
+   DARK MODE STYLES
+   ========================================================================== */
+body.dark-mode {
+  --bg-color: #0f172a;
+  --text-color: #94a3b8;
+  --heading-color: #f8fafc;
+  --card-bg: #1e293b;
+  --nav-bg: rgba(15, 23, 42, 0.85);
+  --input-bg: #1e293b;
+  --input-border: #334155;
+  --border: rgba(255, 255, 255, 0.08);
+  --glass: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .btn-outline {
+  border-color: var(--border);
+  color: var(--heading-color);
+}
+
+body.dark-mode .btn-outline:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+body.dark-mode .card {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .card:hover {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .navbar {
+  border-bottom: 1px solid var(--border);
+}
+
+body.dark-mode .accordion-item {
+  border-color: var(--border);
+}
+
+body.dark-mode .accordion-header {
+  background: var(--card-bg);
+}
+
+body.dark-mode .footer {
+  border-top: 1px solid var(--border);
+}
+
+body.dark-mode .stats-card,
+body.dark-mode .pricing-card,
+body.dark-mode .dashboard-card {
+  background: var(--card-bg);
+  border-color: var(--border);
+}
+
+/* Fix forms for dark mode */
+body.dark-mode .form-control {
+  color: var(--heading-color);
+}
+
+body.dark-mode .form-control::placeholder {
+  color: #64748b;
+}
+
+/* Theme toggle icon animation */
+.theme-toggle .fa-moon {
+  display: block;
+}
+.theme-toggle .fa-sun {
+  display: none;
+}
+
+body.dark-mode .theme-toggle .fa-moon {
+  display: none;
+}
+body.dark-mode .theme-toggle .fa-sun {
+  display: block;
+}

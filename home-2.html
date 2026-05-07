@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform - Freelance Social Media Ghostwriter</title>
+    <meta name="description" content="Premium SaaS + Executive Branding + Social Media Analytics Platform">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-pen-nib"></i>
+                Ghost<span>Writer</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="home-2.html" class="active">Home 2</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="blog.html">Blog</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html">Contact</a>
+                <a href="dashboard.html">Dashboard</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fa-solid fa-moon"></i>
+                    <i class="fa-solid fa-sun" style="display:none;"></i>
+                </button>
+                <button class="rtl-toggle" aria-label="Toggle RTL">
+                    <i class="fa-solid fa-right-left"></i>
+                </button>
+                <a href="login.html" class="btn btn-outline" style="padding: 0.5rem 1rem; border: 2px solid var(--primary); color: var(--primary);">Login</a>
+                <button class="mobile-menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. SPLIT HERO SECTION -->
+    <header class="hero" style="background:var(--dark); color:#fff; padding-top:180px;">
+        <div class="container">
+            <div class="grid-2" style="align-items:center;">
+                <div class="hero-content" style="text-align:left;">
+                    <h1 style="color:#fff;">The Ultimate <br><span style="color:var(--primary)">SaaS Dashboard</span></h1>
+                    <p style="color:var(--gray);">Manage your personal brand like a true enterprise. AI-assisted workflows, real-time analytics, and seamless content approval.</p>
+                    <div class="hero-btns">
+                        <a href="dashboard.html" class="btn btn-primary">View Demo Dashboard</a>
+                    </div>
+                </div>
+                <div class="hero-img-wrap" style="transform:perspective(1000px) rotateY(-10deg);">
+                    <img src="assets/images/dashboard-mockup.png" alt="SaaS Dashboard" style="border:1px solid var(--border); box-shadow:0 20px 50px rgba(0,0,0,0.5);">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. ANALYTICS DASHBOARD PREVIEW -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Deep Analytics</h2>
+                <p class="section-subtitle">Track every impression, engagement, and conversion with precision.</p>
+            </div>
+            <div class="grid-4 mb-8">
+                <div class="card text-center" style="border-top:3px solid var(--primary);">
+                    <h4 style="color:var(--gray); font-weight:500;">Total Followers</h4>
+                    <h2 style="font-size:2.5rem; margin:0.5rem 0;">12.5k</h2>
+                    <span style="color:#10b981;"><i class="fa-solid fa-arrow-up"></i> 12% this month</span>
+                </div>
+                <div class="card text-center" style="border-top:3px solid var(--accent);">
+                    <h4 style="color:var(--gray); font-weight:500;">Engagement Rate</h4>
+                    <h2 style="font-size:2.5rem; margin:0.5rem 0;">4.8%</h2>
+                    <span style="color:#10b981;"><i class="fa-solid fa-arrow-up"></i> 2.1% this month</span>
+                </div>
+                <div class="card text-center" style="border-top:3px solid var(--primary);">
+                    <h4 style="color:var(--gray); font-weight:500;">Profile Views</h4>
+                    <h2 style="font-size:2.5rem; margin:0.5rem 0;">45.2k</h2>
+                    <span style="color:#10b981;"><i class="fa-solid fa-arrow-up"></i> 8% this week</span>
+                </div>
+                <div class="card text-center" style="border-top:3px solid var(--accent);">
+                    <h4 style="color:var(--gray); font-weight:500;">Inbound Leads</h4>
+                    <h2 style="font-size:2.5rem; margin:0.5rem 0;">142</h2>
+                    <span style="color:#10b981;"><i class="fa-solid fa-arrow-up"></i> 15% this month</span>
+                </div>
+            </div>
+            <img src="assets/images/dashboard-mockup.png" alt="Charts" style="border-radius:1rem; width:100%;">
+        </div>
+    </section>
+
+    <!-- 3. WORKFLOW TIMELINE -->
+    <section class="section-padding" style="background:var(--card-bg);">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Executive Onboarding Flow</h2>
+                <p class="section-subtitle">A streamlined process designed for busy founders.</p>
+            </div>
+            <div class="grid-4">
+                <div class="card text-center">
+                    <div style="width:60px; height:60px; border-radius:50%; background:var(--glass); color:var(--primary); display:flex; align-items:center; justify-content:center; font-size:1.5rem; margin:0 auto 1.5rem;">1</div>
+                    <h3 class="card-title">Brand Audit</h3>
+                    <p class="card-text">We analyze your current presence and define your unique voice.</p>
+                </div>
+                <div class="card text-center">
+                    <div style="width:60px; height:60px; border-radius:50%; background:var(--glass); color:var(--primary); display:flex; align-items:center; justify-content:center; font-size:1.5rem; margin:0 auto 1.5rem;">2</div>
+                    <h3 class="card-title">Strategy</h3>
+                    <p class="card-text">Building a 90-day content roadmap aligned with goals.</p>
+                </div>
+                <div class="card text-center">
+                    <div style="width:60px; height:60px; border-radius:50%; background:var(--glass); color:var(--primary); display:flex; align-items:center; justify-content:center; font-size:1.5rem; margin:0 auto 1.5rem;">3</div>
+                    <h3 class="card-title">Creation</h3>
+                    <p class="card-text">Our elite writers draft your posts via the platform.</p>
+                </div>
+                <div class="card text-center">
+                    <div style="width:60px; height:60px; border-radius:50%; background:var(--glass); color:var(--primary); display:flex; align-items:center; justify-content:center; font-size:1.5rem; margin:0 auto 1.5rem;">4</div>
+                    <h3 class="card-title">Approval</h3>
+                    <p class="card-text">One-click approval and automated publishing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. CONTENT CALENDAR SHOWCASE -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="grid-2" style="align-items:center;">
+                <div>
+                    <h2 class="section-title">Visual Content Calendar</h2>
+                    <p style="color:var(--gray); font-size:1.125rem; margin-bottom:2rem;">Never lose track of what's publishing next. Our intuitive drag-and-drop calendar gives you a bird's eye view of your entire content strategy.</p>
+                    <ul style="margin-bottom:2rem;">
+                        <li style="margin-bottom:1rem; display:flex; gap:1rem;"><i class="fa-solid fa-check" style="color:var(--primary); margin-top:0.25rem;"></i> Scheduled auto-publishing to LinkedIn & Twitter</li>
+                        <li style="margin-bottom:1rem; display:flex; gap:1rem;"><i class="fa-solid fa-check" style="color:var(--primary); margin-top:0.25rem;"></i> Easy one-click rescheduling</li>
+                        <li style="margin-bottom:1rem; display:flex; gap:1rem;"><i class="fa-solid fa-check" style="color:var(--primary); margin-top:0.25rem;"></i> Filter by content pillars and themes</li>
+                    </ul>
+                </div>
+                <div class="card" style="padding:1rem;">
+                    <img src="assets/images/blog-thumb.png" alt="Calendar" style="border-radius:0.5rem;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. BRAND VOICE MANAGEMENT -->
+    <section class="section-padding" style="background:var(--card-bg);">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Brand Voice Matrix</h2>
+                <p class="section-subtitle">Ensuring 100% consistency across every single post.</p>
+            </div>
+            <div class="grid-4">
+                <div class="card">
+                    <h3 class="card-title"><i class="fa-solid fa-bullseye" style="color:var(--primary); margin-right:0.5rem;"></i> Tone</h3>
+                    <p class="card-text">Authoritative yet accessible. We capture your exact inflection.</p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title"><i class="fa-solid fa-font" style="color:var(--primary); margin-right:0.5rem;"></i> Vocabulary</h3>
+                    <p class="card-text">Industry-specific jargon used correctly to establish expertise.</p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title"><i class="fa-solid fa-layer-group" style="color:var(--primary); margin-right:0.5rem;"></i> Formatting</h3>
+                    <p class="card-text">Optimized line breaks, bullet points, and hook structures.</p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title"><i class="fa-solid fa-robot" style="color:var(--primary); margin-right:0.5rem;"></i> AI Guardrails</h3>
+                    <p class="card-text">Custom AI models trained specifically on your past writings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. PREMIUM CTA -->
+    <section class="section-padding" style="background:var(--gradient); color:#fff; text-align:center;">
+        <div class="container">
+            <h2 style="font-size:3rem; margin-bottom:1.5rem; color:#fff;">Experience the Platform</h2>
+            <p style="font-size:1.25rem; max-width:600px; margin:0 auto 2.5rem; opacity:0.9;">Stop managing spreadsheets. Start managing your legacy. Book a walkthrough of the GhostWriter platform today.</p>
+            <a href="contact.html" class="btn" style="background:#fff; color:var(--primary); padding:1rem 2.5rem; font-size:1.125rem;">Book Executive Demo</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-widget">
+                    <a href="index.html" class="logo" style="color:#fff; margin-bottom:1.5rem;">
+                        <i class="fa-solid fa-pen-nib"></i>
+                        Ghost<span style="color:var(--primary);">Writer</span>
+                    </a>
+                    <p style="color:var(--gray); margin-bottom:1.5rem;">The premium platform for executive branding and content analytics.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-widget">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services-details.html">Executive Ghostwriting</a></li>
+                        <li><a href="services-details.html">Brand Strategy</a></li>
+                        <li><a href="services-details.html">Content Management</a></li>
+                        <li><a href="services-details.html">Analytics Reporting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li style="color:var(--gray);"><i class="fa-solid fa-envelope" style="margin-right:0.5rem;"></i> hello@ghostwriter.com</li>
+                        <li style="color:var(--gray);"><i class="fa-solid fa-phone" style="margin-right:0.5rem;"></i> +1 (555) 123-4567</li>
+                        <li style="color:var(--gray);"><i class="fa-solid fa-location-dot" style="margin-right:0.5rem;"></i> 100 Innovation Drive, SF</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Freelance Social Media Ghostwriter. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+/* ==========================================================================
+   RTL STYLES
+   ========================================================================== */
+body.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+body.rtl .logo {
+  flex-direction: row-reverse;
+}
+
+body.rtl .nav-links {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+body.rtl .btn {
+  flex-direction: row-reverse;
+}
+
+body.rtl .footer-links a:hover {
+  padding-left: 0;
+  padding-right: 0.5rem;
+}
+
+body.rtl .accordion-header i {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+body.rtl .form-group {
+  text-align: right;
+}
+
+body.rtl .hero-content {
+  text-align: right;
+}
+
+body.rtl .hero-btns {
+  justify-content: flex-start;
+}
+
+/* Ensure padding and margins flip correctly */
+body.rtl .ml-auto {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+body.rtl .mr-auto {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+body.rtl .pl-3 {
+  padding-right: 1rem;
+  padding-left: 0;
+}
+
+body.rtl .pr-3 {
+  padding-left: 1rem;
+  padding-right: 0;
+}
+
+/* Dashboard specific RTL */
+body.rtl .dashboard-sidebar {
+  right: 0;
+  left: auto;
+  border-right: none;
+  border-left: 1px solid var(--border);
+}
+
+body.rtl .dashboard-main {
+  margin-left: 0;
+  margin-right: 250px;
+}
+
+@media (max-width: 1024px) {
+  body.rtl .dashboard-main {
+    margin-right: 0;
+  }
+}
