@@ -6,9 +6,10 @@
     <title>Contact - Freelance Social Media Ghostwriter</title>
     <meta name="description" content="Get in touch with our team.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
+	<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%236c63ff' d='M290.7 93.4c22.2-22.2 58.2-22.2 80.4 0l47.4 47.4c22.2 22.2 22.2 58.2 0 80.4l-219.3 219.3c-6 6-13.4 10.5-21.6 12.7l-79.9 22c-15.4 4.2-29.6-10-25.4-25.4l22-79.9c2.2-8.1 6.7-15.5 12.7-21.6L290.7 93.4zM512 48c0-26.5-21.5-48-48-48s-48 21.5-48 48 21.5 48 48 48 48-21.5 48-48zm-16 320l-128-128c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l128 128c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9z'/></svg>">
 </head>
 <body>
 
@@ -28,6 +29,16 @@
                 <a href="pricing.html">Pricing</a>
                 <a href="contact.html" class="active">Contact</a>
                 <a href="dashboard.html">Dashboard</a>
+                <div class="mobile-nav-actions">
+                    <button class="theme-toggle" aria-label="Toggle Dark Mode">
+                        <i class="fa-solid fa-moon"></i>
+                        <i class="fa-solid fa-sun" style="display:none;"></i>
+                    </button>
+                    <button class="rtl-toggle" aria-label="Toggle RTL">
+                        <i class="fa-solid fa-right-left"></i>
+                    </button>
+                    <a href="login.html" class="btn btn-outline" style="border: 2px solid var(--primary); color: var(--primary);">Login</a>
+                </div>
             </div>
             <div class="nav-actions">
                 <button class="theme-toggle" aria-label="Toggle Dark Mode">
@@ -46,7 +57,7 @@
     </nav>
 
     <!-- CONTACT HERO -->
-    <div class="page-header" style="padding-bottom:0;">
+    <div class="page-header contact-header">
         <div class="container">
             <h1>Get in Touch</h1>
             <p class="section-subtitle">Ready to elevate your executive brand? Drop us a line.</p>
@@ -80,24 +91,45 @@
                     </form>
                 </div>
                 
-                <div>
-                    <div class="card mb-4" style="background:var(--primary); color:#fff; border:none;">
-                        <h3 style="color:#fff;"><i class="fa-solid fa-envelope mb-4" style="font-size:2rem;"></i><br>Email Us</h3>
-                        <p>hello@ghostwriter.com</p>
+                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <div class="card" style="text-align: center;">
+                        <i class="fa-solid fa-envelope" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1.5rem;"></i>
+                        <h3 class="card-title">Email Us</h3>
+                        <p class="card-text">hello@ghostwriter.com</p>
                     </div>
-                    <div class="card mb-4" style="background:var(--accent); color:#fff; border:none;">
-                        <h3 style="color:#fff;"><i class="fa-solid fa-phone mb-4" style="font-size:2rem;"></i><br>Call Us</h3>
-                        <p>+1 (555) 123-4567</p>
+                    
+                    <div class="card" style="text-align: center;">
+                        <i class="fa-solid fa-phone" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1.5rem;"></i>
+                        <h3 class="card-title">Call Us</h3>
+                        <p class="card-text">+1 (555) 123-4567</p>
                     </div>
-                    <div class="card" style="border:none;">
+                    
+                    <div class="card" style="text-align: center;">
+                        <i class="fa-solid fa-location-dot" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1.5rem;"></i>
                         <h3 class="card-title">Headquarters</h3>
-                        <p class="card-text">100 Innovation Drive<br>San Francisco, CA 94103</p>
-                        <!-- MAP PLACEHOLDER -->
-                        <div style="width:100%; height:200px; background:var(--glass); border-radius:1rem; display:flex; align-items:center; justify-content:center; border:1px solid var(--border);">
-                            <i class="fa-solid fa-map-location-dot" style="font-size:3rem; color:var(--gray);"></i>
+                        <p class="card-text">100 Innovation Drive, San Francisco, CA 94103</p>
+                        <div style="width:100%; height:120px; background:var(--card-bg); border-radius:0.75rem; margin-top:1.5rem; display:flex; align-items:center; justify-content:center; border:1px solid var(--border);">
+                            <i class="fa-solid fa-map-location-dot" style="font-size:2rem; color:var(--gray);"></i>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- GOOGLE MAP SECTION -->
+    <section class="section-padding" style="padding-top: 0;">
+        <div class="container">
+            <div class="card" style="padding: 0; overflow: hidden; border: none; box-shadow: var(--shadow);">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.123456789!2d-122.3999!3d37.7749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085807d7d7d7d7d%3A0x7d7d7d7d7d7d7d7d!2sSan+Francisco%2C+CA!5e0!3m2!1sen!2sus!4v1234567890" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0; display: block;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
         </div>
     </section>
@@ -107,11 +139,52 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-widget">
-                    <a href="index.html" class="logo" style="color:#fff; margin-bottom:1.5rem;">
+                    <a href="index.html" class="logo" style="color:var(--heading-color); margin-bottom:1.5rem;">
                         <i class="fa-solid fa-pen-nib"></i>
                         Ghost<span style="color:var(--primary);">Writer</span>
                     </a>
+                    <p style="color:var(--gray); margin-bottom:1.5rem;">The premium platform for executive branding and
+                        content analytics.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
                 </div>
+                <div class="footer-widget">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services-details.html">Executive Ghostwriting</a></li>
+                        <li><a href="services-details.html">Brand Strategy</a></li>
+                        <li><a href="services-details.html">Content Management</a></li>
+                        <li><a href="services-details.html">Analytics Reporting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li style="color:var(--gray);"><i class="fa-solid fa-envelope" style="margin-right:0.5rem;"></i>
+                            hello@ghostwriter.com</li>
+                        <li style="color:var(--gray);"><i class="fa-solid fa-phone" style="margin-right:0.5rem;"></i> +1
+                            (555) 123-4567</li>
+                        <li style="color:var(--gray);"><i class="fa-solid fa-location-dot"
+                                style="margin-right:0.5rem;"></i> 100 Innovation Drive, SF</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Freelance Social Media Ghostwriter. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -119,3 +192,4 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+

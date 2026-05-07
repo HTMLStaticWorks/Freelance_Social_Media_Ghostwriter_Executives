@@ -6,9 +6,10 @@
     <title>Pricing - Freelance Social Media Ghostwriter</title>
     <meta name="description" content="Premium pricing plans for executive ghostwriting.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
+	<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%236c63ff' d='M290.7 93.4c22.2-22.2 58.2-22.2 80.4 0l47.4 47.4c22.2 22.2 22.2 58.2 0 80.4l-219.3 219.3c-6 6-13.4 10.5-21.6 12.7l-79.9 22c-15.4 4.2-29.6-10-25.4-25.4l22-79.9c2.2-8.1 6.7-15.5 12.7-21.6L290.7 93.4zM512 48c0-26.5-21.5-48-48-48s-48 21.5-48 48 21.5 48 48 48 48-21.5 48-48zm-16 320l-128-128c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l128 128c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9z'/></svg>">
 </head>
 <body>
 
@@ -28,6 +29,16 @@
                 <a href="pricing.html" class="active">Pricing</a>
                 <a href="contact.html">Contact</a>
                 <a href="dashboard.html">Dashboard</a>
+                <div class="mobile-nav-actions">
+                    <button class="theme-toggle" aria-label="Toggle Dark Mode">
+                        <i class="fa-solid fa-moon"></i>
+                        <i class="fa-solid fa-sun" style="display:none;"></i>
+                    </button>
+                    <button class="rtl-toggle" aria-label="Toggle RTL">
+                        <i class="fa-solid fa-right-left"></i>
+                    </button>
+                    <a href="login.html" class="btn btn-outline" style="border: 2px solid var(--primary); color: var(--primary);">Login</a>
+                </div>
             </div>
             <div class="nav-actions">
                 <button class="theme-toggle" aria-label="Toggle Dark Mode">
@@ -46,7 +57,7 @@
     </nav>
 
     <!-- PAGE HEADER -->
-    <div class="page-header">
+    <div class="page-header pricing-header">
         <div class="container">
             <h1>Transparent Pricing</h1>
             <p class="section-subtitle">Invest in your most valuable asset: Your reputation.</p>
@@ -54,13 +65,13 @@
     </div>
 
     <!-- PRICING CARDS (4 CARDS) -->
-    <section class="section-padding" style="padding-top:0;">
+    <section class="section-padding">
         <div class="container">
             <div class="grid-4">
-                <div class="card pricing-card text-center">
+                <div class="card pricing-card text-center" style="border-color: var(--border);">
                     <h3 class="card-title">Starter</h3>
                     <div style="font-size:3rem; font-weight:800; color:var(--primary); margin:1.5rem 0;">$1,500<span style="font-size:1rem; color:var(--gray); font-weight:400;">/mo</span></div>
-                    <ul style="text-align:left; margin-bottom:2rem; flex:1;">
+                    <ul style="text-align:left;">
                         <li style="margin-bottom:1rem;"><i class="fa-solid fa-check" style="color:var(--primary); margin-right:0.5rem;"></i> 2 LinkedIn Posts/Week</li>
                         <li style="margin-bottom:1rem;"><i class="fa-solid fa-check" style="color:var(--primary); margin-right:0.5rem;"></i> Basic Analytics</li>
                         <li style="margin-bottom:1rem;"><i class="fa-solid fa-check" style="color:var(--primary); margin-right:0.5rem;"></i> Monthly Strategy Call</li>
@@ -68,11 +79,11 @@
                     <a href="contact.html" class="btn btn-outline" style="width:100%;">Select Plan</a>
                 </div>
                 
-                <div class="card pricing-card text-center" style="border:2px solid var(--primary); transform:scale(1.05); position:relative;">
+                <div class="card pricing-card text-center" style="border:2px solid var(--primary); box-shadow: 0 20px 40px rgba(108, 99, 255, 0.2); position:relative;">
                     <div style="position:absolute; top:-15px; left:50%; transform:translateX(-50%); background:var(--primary); color:#fff; padding:0.25rem 1rem; border-radius:2rem; font-size:0.875rem; font-weight:600;">Most Popular</div>
                     <h3 class="card-title">Professional</h3>
                     <div style="font-size:3rem; font-weight:800; color:var(--primary); margin:1.5rem 0;">$3,000<span style="font-size:1rem; color:var(--gray); font-weight:400;">/mo</span></div>
-                    <ul style="text-align:left; margin-bottom:2rem; flex:1;">
+                    <ul style="text-align:left;">
                         <li style="margin-bottom:1rem;"><i class="fa-solid fa-check" style="color:var(--primary); margin-right:0.5rem;"></i> 5 LinkedIn Posts/Week</li>
                         <li style="margin-bottom:1rem;"><i class="fa-solid fa-check" style="color:var(--primary); margin-right:0.5rem;"></i> Full Platform Access</li>
                         <li style="margin-bottom:1rem;"><i class="fa-solid fa-check" style="color:var(--primary); margin-right:0.5rem;"></i> Bi-weekly Strategy Calls</li>
@@ -81,10 +92,10 @@
                     <a href="contact.html" class="btn btn-primary" style="width:100%;">Select Plan</a>
                 </div>
 
-                <div class="card pricing-card text-center">
+                <div class="card pricing-card text-center" style="border-color: var(--border);">
                     <h3 class="card-title">Executive</h3>
                     <div style="font-size:3rem; font-weight:800; color:var(--primary); margin:1.5rem 0;">$5,500<span style="font-size:1rem; color:var(--gray); font-weight:400;">/mo</span></div>
-                    <ul style="text-align:left; margin-bottom:2rem; flex:1;">
+                    <ul style="text-align:left;">
                         <li style="margin-bottom:1rem;"><i class="fa-solid fa-check" style="color:var(--primary); margin-right:0.5rem;"></i> Multi-platform (LI + X)</li>
                         <li style="margin-bottom:1rem;"><i class="fa-solid fa-check" style="color:var(--primary); margin-right:0.5rem;"></i> Weekly Newsletters</li>
                         <li style="margin-bottom:1rem;"><i class="fa-solid fa-check" style="color:var(--primary); margin-right:0.5rem;"></i> Dedicated Writer</li>
@@ -92,15 +103,123 @@
                     <a href="contact.html" class="btn btn-outline" style="width:100%;">Select Plan</a>
                 </div>
 
-                <div class="card pricing-card text-center">
+                <div class="card pricing-card text-center" style="border-color: var(--border);">
                     <h3 class="card-title">Enterprise</h3>
                     <div style="font-size:3rem; font-weight:800; color:var(--primary); margin:1.5rem 0;">Custom</div>
-                    <ul style="text-align:left; margin-bottom:2rem; flex:1;">
+                    <ul style="text-align:left;">
                         <li style="margin-bottom:1rem;"><i class="fa-solid fa-check" style="color:var(--primary); margin-right:0.5rem;"></i> Multiple Executives</li>
                         <li style="margin-bottom:1rem;"><i class="fa-solid fa-check" style="color:var(--primary); margin-right:0.5rem;"></i> Custom API Integrations</li>
                         <li style="margin-bottom:1rem;"><i class="fa-solid fa-check" style="color:var(--primary); margin-right:0.5rem;"></i> 24/7 Support SLA</li>
                     </ul>
-                    <a href="contact.html" class="btn btn-outline" style="width:100%;">Contact Sales</a>
+                    <a href="contact.html" class="btn btn-primary" style="width:100%;"><i class="fa-solid fa-phone"></i> Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLAN COMPARISON -->
+    <section class="section-padding" style="background:var(--bg-color);">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Compare Plans</h2>
+                <p class="section-subtitle">A deep dive into every feature we offer.</p>
+            </div>
+            <div class="comparison-wrap">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th class="plan-name text-center">Starter</th>
+                            <th class="plan-name text-center">Professional</th>
+                            <th class="plan-name text-center">Executive</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>LinkedIn Posts</td>
+                            <td class="text-center">2/week</td>
+                            <td class="text-center">5/week</td>
+                            <td class="text-center">Daily + Engagement</td>
+                        </tr>
+                        <tr>
+                            <td>X (Twitter) Content</td>
+                            <td class="text-center"><i class="fa-solid fa-xmark"></i></td>
+                            <td class="text-center"><i class="fa-solid fa-check"></i></td>
+                            <td class="text-center"><i class="fa-solid fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Custom Newsletters</td>
+                            <td class="text-center"><i class="fa-solid fa-xmark"></i></td>
+                            <td class="text-center"><i class="fa-solid fa-xmark"></i></td>
+                            <td class="text-center"><i class="fa-solid fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Analytics Dashboard</td>
+                            <td class="text-center">Basic</td>
+                            <td class="text-center">Advanced</td>
+                            <td class="text-center">Full Enterprise</td>
+                        </tr>
+                        <tr>
+                            <td>Dedicated Writer</td>
+                            <td class="text-center"><i class="fa-solid fa-xmark"></i></td>
+                            <td class="text-center"><i class="fa-solid fa-check"></i></td>
+                            <td class="text-center"><i class="fa-solid fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Monthly Strategy Call</td>
+                            <td class="text-center">30 min</td>
+                            <td class="text-center">60 min</td>
+                            <td class="text-center">Unlimited</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section-padding" style="background:var(--card-bg);">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Everything you need to know before you scale.</p>
+            </div>
+            <div style="max-width:800px; margin:0 auto;">
+                <div class="accordion-item active">
+                    <div class="accordion-header">
+                        <span>How does the onboarding process work?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-body">
+                        <p>After choosing a plan, we schedule a 60-minute discovery call to learn your voice, industry expertise, and content goals. Within 48 hours, you'll receive your first draft of content in the dashboard for approval.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Can I change plans later?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Yes, you can upgrade or downgrade your plan at any time through your dashboard. Changes will be reflected in your next billing cycle.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Who actually writes my content?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Your content is written by a dedicated team of elite journalistic talent, vetted specifically for executive ghostwriting. We don't use AI for the core writing; we use it only for research and data analytics.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Is there a long-term commitment?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-body">
+                        <p>All our plans are month-to-month by default. However, we do offer annual discounts if you choose to commit to a longer-term brand strategy.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -111,11 +230,52 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-widget">
-                    <a href="index.html" class="logo" style="color:#fff; margin-bottom:1.5rem;">
+                    <a href="index.html" class="logo" style="color:var(--heading-color); margin-bottom:1.5rem;">
                         <i class="fa-solid fa-pen-nib"></i>
                         Ghost<span style="color:var(--primary);">Writer</span>
                     </a>
+                    <p style="color:var(--gray); margin-bottom:1.5rem;">The premium platform for executive branding and
+                        content analytics.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
                 </div>
+                <div class="footer-widget">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services-details.html">Executive Ghostwriting</a></li>
+                        <li><a href="services-details.html">Brand Strategy</a></li>
+                        <li><a href="services-details.html">Content Management</a></li>
+                        <li><a href="services-details.html">Analytics Reporting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li style="color:var(--gray);"><i class="fa-solid fa-envelope" style="margin-right:0.5rem;"></i>
+                            hello@ghostwriter.com</li>
+                        <li style="color:var(--gray);"><i class="fa-solid fa-phone" style="margin-right:0.5rem;"></i> +1
+                            (555) 123-4567</li>
+                        <li style="color:var(--gray);"><i class="fa-solid fa-location-dot"
+                                style="margin-right:0.5rem;"></i> 100 Innovation Drive, SF</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Freelance Social Media Ghostwriter. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -123,3 +283,4 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+

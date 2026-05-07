@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Freelance Social Media Ghostwriter</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <style>
         /* DASHBOARD SPECIFIC STYLES */
-        body { background: var(--bg-color); margin: 0; padding: 0; display: flex; height: 100vh; overflow: hidden; }
-        
+        body {
+            background: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
         .dashboard-sidebar {
             width: 250px;
             background: var(--card-bg);
@@ -56,7 +64,8 @@
             font-weight: 500;
         }
 
-        .sidebar-menu a:hover, .sidebar-menu a.active {
+        .sidebar-menu a:hover,
+        .sidebar-menu a.active {
             background: var(--glass);
             color: var(--primary);
             border-right: 3px solid var(--primary);
@@ -82,23 +91,25 @@
             background: var(--card-bg);
             border-radius: 1rem;
             border: 1px solid var(--border);
-            overflow: hidden;
+            overflow-x: auto;
             margin-top: 2rem;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
+            min-width: 600px;
         }
 
-        th, td {
+        th,
+        td {
             padding: 1rem 1.5rem;
             text-align: left;
             border-bottom: 1px solid var(--border);
         }
 
         th {
-            background: rgba(0,0,0,0.02);
+            background: rgba(0, 0, 0, 0.02);
             color: var(--gray);
             font-weight: 600;
         }
@@ -109,21 +120,102 @@
             font-size: 0.875rem;
             font-weight: 600;
         }
-        
-        .status-pending { background: #fef3c7; color: #d97706; }
-        .status-approved { background: #d1fae5; color: #059669; }
+
+        .status-pending {
+            background: #fef3c7;
+            color: #d97706;
+        }
+
+        .status-approved {
+            background: #d1fae5;
+            color: #059669;
+        }
 
         @media (max-width: 1024px) {
-            .dashboard-sidebar { left: -250px; }
-            .dashboard-sidebar.active { left: 0; }
-            .dashboard-main { margin-left: 0; }
+            .dashboard-sidebar {
+                left: -250px;
+            }
+
+            .dashboard-sidebar.active {
+                left: 0;
+            }
+
+            .dashboard-main {
+                margin-left: 0;
+            }
+
+            #sidebar-toggle {
+                display: block !important;
+            }
+
+            .dashboard-header {
+                padding: 0 1rem;
+            }
+
+            .dashboard-content {
+                padding: 1.5rem 1rem;
+            }
+        }
+
+        #sidebar-toggle {
+            display: none;
+        }
+
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 90;
+            display: none;
+            backdrop-filter: blur(4px);
+        }
+
+        .sidebar-overlay.active {
+            display: block;
+        }
+
+        #sidebar-close {
+            display: none;
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: transparent;
+            font-size: 1.5rem;
+            color: var(--text-color);
+        }
+
+        @media (max-width: 1024px) {
+            #sidebar-close {
+                display: block;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .dashboard-sidebar {
+                width: 280px;
+                left: -280px;
+            }
+
+            .dashboard-sidebar.active {
+                left: 0;
+            }
         }
     </style>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%236c63ff' d='M290.7 93.4c22.2-22.2 58.2-22.2 80.4 0l47.4 47.4c22.2 22.2 22.2 58.2 0 80.4l-219.3 219.3c-6 6-13.4 10.5-21.6 12.7l-79.9 22c-15.4 4.2-29.6-10-25.4-25.4l22-79.9c2.2-8.1 6.7-15.5 12.7-21.6L290.7 93.4zM512 48c0-26.5-21.5-48-48-48s-48 21.5-48 48 21.5 48 48 48 48-21.5 48-48zm-16 320l-128-128c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l128 128c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9z'/></svg>">
 </head>
+
 <body>
+
+    <!-- SIDEBAR OVERLAY -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
 
     <!-- SIDEBAR -->
     <aside class="dashboard-sidebar">
+        <button id="sidebar-close"><i class="fa-solid fa-xmark"></i></button>
         <div class="sidebar-header">
             <a href="index.html" class="logo">
                 <i class="fa-solid fa-pen-nib"></i>
@@ -131,16 +223,30 @@
             </a>
         </div>
         <nav class="sidebar-menu">
-            <a href="#" class="active"><i class="fa-solid fa-chart-pie"></i> Overview</a>
-            <a href="#"><i class="fa-solid fa-file-signature"></i> Approvals <span style="background:var(--primary); color:#fff; padding:0.1rem 0.5rem; border-radius:1rem; font-size:0.75rem; margin-left:auto;">3</span></a>
-            <a href="#"><i class="fa-solid fa-calendar-days"></i> Calendar</a>
-            <a href="#"><i class="fa-solid fa-chart-line"></i> Analytics</a>
-            <a href="#"><i class="fa-solid fa-book-open"></i> Brand Voice</a>
-            <a href="#"><i class="fa-solid fa-bell"></i> Notifications</a>
-            <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+            <a href="#" class="active" data-section="overview"><i class="fa-solid fa-chart-pie"></i> Overview</a>
+            <a href="#" data-section="approvals"><i class="fa-solid fa-file-signature"></i> Approvals <span
+                    style="background:var(--primary); color:#fff; padding:0.1rem 0.5rem; border-radius:1rem; font-size:0.75rem; margin-left:auto;">3</span></a>
+            <a href="#" data-section="calendar"><i class="fa-solid fa-calendar-days"></i> Calendar</a>
+            <a href="#" data-section="analytics"><i class="fa-solid fa-chart-line"></i> Analytics</a>
+            <a href="#" data-section="brand-voice"><i class="fa-solid fa-book-open"></i> Brand Voice</a>
+            <a href="#" data-section="notifications"><i class="fa-solid fa-bell"></i> Notifications</a>
+            <a href="#" data-section="settings"><i class="fa-solid fa-gear"></i> Settings</a>
         </nav>
+        <div class="mobile-nav-actions"
+            style="padding:1.5rem; border-top:1px solid var(--border); justify-content: center;">
+            <button class="theme-toggle" aria-label="Toggle Dark Mode"
+                style="border:1px solid var(--border); background:transparent; color:var(--text-color); font-size:1.25rem; padding:0.5rem; border-radius:50%;">
+                <i class="fa-solid fa-moon"></i>
+                <i class="fa-solid fa-sun" style="display:none;"></i>
+            </button>
+            <button class="rtl-toggle" aria-label="Toggle RTL"
+                style="border:1px solid var(--border); background:transparent; color:var(--text-color); font-size:1.25rem; padding:0.5rem; border-radius:50%;">
+                <i class="fa-solid fa-right-left"></i>
+            </button>
+        </div>
         <div style="padding:1.5rem; border-top:1px solid var(--border);">
-            <button id="logout-btn" class="btn btn-outline" style="width:100%; border-color:#ef4444; color:#ef4444;"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+            <button id="logout-btn" class="btn btn-outline" style="width:100%; border-color:#ef4444; color:#ef4444;"><i
+                    class="fa-solid fa-right-from-bracket"></i> Logout</button>
         </div>
     </aside>
 
@@ -148,133 +254,344 @@
     <main class="dashboard-main">
         <header class="dashboard-header">
             <div style="display:flex; align-items:center; gap:1rem;">
-                <button id="sidebar-toggle" style="background:transparent; font-size:1.5rem; color:var(--text-color); display:block;" class="mobile-only-btn"><i class="fa-solid fa-bars"></i></button>
-                <h2 style="margin:0; font-size:1.25rem;">Dashboard Overview</h2>
+                <button id="sidebar-toggle" style="background:transparent; font-size:1.5rem; color:var(--text-color);"
+                    class="mobile-only-btn"><i class="fa-solid fa-bars"></i></button>
+                <h2 id="section-title" style="margin:0; font-size:1.25rem;">Dashboard Overview</h2>
             </div>
             <div style="display:flex; align-items:center; gap:1.5rem;">
-                <button class="theme-toggle" aria-label="Toggle Dark Mode" style="border:1px solid var(--border); background:transparent; color:var(--text-color); font-size:1.25rem; padding:0.5rem; border-radius:50%;">
+                <button class="theme-toggle" aria-label="Toggle Dark Mode"
+                    style="border:1px solid var(--border); background:transparent; color:var(--text-color); font-size:1.25rem; padding:0.5rem; border-radius:50%;">
                     <i class="fa-solid fa-moon"></i>
                     <i class="fa-solid fa-sun" style="display:none;"></i>
                 </button>
-                <button class="rtl-toggle" aria-label="Toggle RTL" style="border:1px solid var(--border); background:transparent; color:var(--text-color); font-size:1.25rem; padding:0.5rem; border-radius:50%;">
+                <button class="rtl-toggle" aria-label="Toggle RTL"
+                    style="border:1px solid var(--border); background:transparent; color:var(--text-color); font-size:1.25rem; padding:0.5rem; border-radius:50%;">
                     <i class="fa-solid fa-right-left"></i>
                 </button>
                 <div style="display:flex; align-items:center; gap:0.5rem;">
-                    <img src="assets/images/avatar.png" alt="Profile" style="width:40px; height:40px; border-radius:50%; object-fit:cover;">
+                    <div
+                        style="width:40px; height:40px; border-radius:50%; background:var(--gradient); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.875rem; box-shadow: 0 2px 10px rgba(108, 99, 255, 0.2);">
+                        JD</div>
                 </div>
             </div>
         </header>
 
         <div class="dashboard-content">
-            
-            <!-- 4 ANALYTICS CARDS -->
-            <div class="grid-4">
-                <div class="card" style="padding:1.5rem;">
-                    <p style="color:var(--gray); margin-bottom:0.5rem; font-weight:500;">Total Audience</p>
-                    <h2 style="font-size:2rem; margin:0;">24,592</h2>
-                    <p style="color:#10b981; margin-top:0.5rem; font-size:0.875rem;"><i class="fa-solid fa-arrow-trend-up"></i> +4.2% from last week</p>
+
+            <!-- OVERVIEW SECTION -->
+            <div id="overview-section" class="content-section">
+                <!-- 4 ANALYTICS CARDS -->
+                <div class="grid-4">
+                    <div class="card" style="padding:1.5rem;">
+                        <p style="color:var(--gray); margin-bottom:0.5rem; font-weight:500;">Total Audience</p>
+                        <h2 style="font-size:2rem; margin:0;">24,592</h2>
+                        <p style="color:#10b981; margin-top:0.5rem; font-size:0.875rem;"><i
+                                class="fa-solid fa-arrow-trend-up"></i> +4.2% from last week</p>
+                    </div>
+                    <div class="card" style="padding:1.5rem;">
+                        <p style="color:var(--gray); margin-bottom:0.5rem; font-weight:500;">Avg. Engagement Rate</p>
+                        <h2 style="font-size:2rem; margin:0;">6.8%</h2>
+                        <p style="color:#10b981; margin-top:0.5rem; font-size:0.875rem;"><i
+                                class="fa-solid fa-arrow-trend-up"></i> +1.1% from last week</p>
+                    </div>
+                    <div class="card" style="padding:1.5rem;">
+                        <p style="color:var(--gray); margin-bottom:0.5rem; font-weight:500;">Impressions (30d)</p>
+                        <h2 style="font-size:2rem; margin:0;">142k</h2>
+                        <p style="color:#10b981; margin-top:0.5rem; font-size:0.875rem;"><i
+                                class="fa-solid fa-arrow-trend-up"></i> +12.5% from last week</p>
+                    </div>
+                    <div class="card" style="padding:1.5rem;">
+                        <p style="color:var(--gray); margin-bottom:0.5rem; font-weight:500;">Posts Scheduled</p>
+                        <h2 style="font-size:2rem; margin:0;">8</h2>
+                        <p style="color:var(--gray); margin-top:0.5rem; font-size:0.875rem;">Next post in 4 hours</p>
+                    </div>
                 </div>
-                <div class="card" style="padding:1.5rem;">
-                    <p style="color:var(--gray); margin-bottom:0.5rem; font-weight:500;">Avg. Engagement Rate</p>
-                    <h2 style="font-size:2rem; margin:0;">6.8%</h2>
-                    <p style="color:#10b981; margin-top:0.5rem; font-size:0.875rem;"><i class="fa-solid fa-arrow-trend-up"></i> +1.1% from last week</p>
+
+                <div class="grid-2 mt-4">
+                    <!-- CHART SECTION -->
+                    <div class="card">
+                        <h3 class="card-title">Engagement Overview</h3>
+                        <div id="engagement-chart"
+                            style="width:100%; height:200px; border-bottom:1px solid var(--border);">
+                            <!-- Filled by JS -->
+                        </div>
+                        <div
+                            style="display:flex; justify-content:space-between; margin-top:1rem; color:var(--gray); font-size:0.875rem;">
+                            <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+                        </div>
+                    </div>
+
+                    <!-- RECENT ACTIVITY -->
+                    <div class="card">
+                        <h3 class="card-title">Recent Activity</h3>
+                        <div style="display:flex; flex-direction:column; gap:1rem; margin-top:1rem;">
+                            <div style="display:flex; gap:1rem; align-items:flex-start;">
+                                <div
+                                    style="width:10px; height:10px; border-radius:50%; background:var(--primary); margin-top:5px;">
+                                </div>
+                                <div>
+                                    <p style="margin:0; font-weight:500;">Post Approved</p>
+                                    <p style="margin:0; color:var(--gray); font-size:0.875rem;">"The future of B2B
+                                        SaaS..." scheduled for tomorrow.</p>
+                                </div>
+                            </div>
+                            <div style="display:flex; gap:1rem; align-items:flex-start;">
+                                <div
+                                    style="width:10px; height:10px; border-radius:50%; background:#10b981; margin-top:5px;">
+                                </div>
+                                <div>
+                                    <p style="margin:0; font-weight:500;">Post Published</p>
+                                    <p style="margin:0; color:var(--gray); font-size:0.875rem;">Generated 4,500
+                                        impressions in 2 hours.</p>
+                                </div>
+                            </div>
+                            <div style="display:flex; gap:1rem; align-items:flex-start;">
+                                <div
+                                    style="width:10px; height:10px; border-radius:50%; background:#f59e0b; margin-top:5px;">
+                                </div>
+                                <div>
+                                    <p style="margin:0; font-weight:500;">Draft Ready for Review</p>
+                                    <p style="margin:0; color:var(--gray); font-size:0.875rem;">Writer submitted 3 new
+                                        drafts.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card" style="padding:1.5rem;">
-                    <p style="color:var(--gray); margin-bottom:0.5rem; font-weight:500;">Impressions (30d)</p>
-                    <h2 style="font-size:2rem; margin:0;">142k</h2>
-                    <p style="color:#10b981; margin-top:0.5rem; font-size:0.875rem;"><i class="fa-solid fa-arrow-trend-up"></i> +12.5% from last week</p>
-                </div>
-                <div class="card" style="padding:1.5rem;">
-                    <p style="color:var(--gray); margin-bottom:0.5rem; font-weight:500;">Posts Scheduled</p>
-                    <h2 style="font-size:2rem; margin:0;">8</h2>
-                    <p style="color:var(--gray); margin-top:0.5rem; font-size:0.875rem;">Next post in 4 hours</p>
+
+                <!-- CONTENT APPROVAL TABLE -->
+                <h3 style="margin-top:2rem;">Content Pending Approval</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Platform</th>
+                                <th>Content Preview</th>
+                                <th>Suggested Date</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><i class="fa-brands fa-linkedin" style="color:#0a66c2; font-size:1.5rem;"></i></td>
+                                <td><span style="font-weight:500;">Most founders make this one mistake...</span></td>
+                                <td>May 10, 9:00 AM</td>
+                                <td><span class="status-badge status-pending">Pending Review</span></td>
+                                <td>
+                                    <button class="btn btn-outline"
+                                        style="padding:0.25rem 0.75rem; font-size:0.875rem;">Review</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-brands fa-x-twitter"
+                                        style="color:var(--text-color); font-size:1.5rem;"></i></td>
+                                <td><span style="font-weight:500;">Thread: How we scaled to $1M ARR...</span></td>
+                                <td>May 11, 2:00 PM</td>
+                                <td><span class="status-badge status-pending">Pending Review</span></td>
+                                <td>
+                                    <button class="btn btn-outline"
+                                        style="padding:0.25rem 0.75rem; font-size:0.875rem;">Review</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-brands fa-linkedin" style="color:#0a66c2; font-size:1.5rem;"></i></td>
+                                <td><span style="font-weight:500;">The real difference between managers and
+                                        leaders...</span></td>
+                                <td>May 13, 8:30 AM</td>
+                                <td><span class="status-badge status-approved">Approved</span></td>
+                                <td>
+                                    <button class="btn btn-outline"
+                                        style="padding:0.25rem 0.75rem; font-size:0.875rem; border-color:transparent; color:var(--gray);"
+                                        disabled>Scheduled</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
-            <div class="grid-2 mt-4">
-                <!-- CHART SECTION -->
-                <div class="card">
-                    <h3 class="card-title">Engagement Overview</h3>
-                    <div id="engagement-chart" style="width:100%; height:200px; border-bottom:1px solid var(--border);">
-                        <!-- Filled by JS -->
+            <!-- APPROVALS SECTION -->
+            <div id="approvals-section" class="content-section" style="display:none;">
+                <div class="grid-3">
+                    <div class="card" style="padding:1.5rem; text-align:center;">
+                        <i class="fa-solid fa-clock-rotate-left"
+                            style="font-size:2.5rem; color:var(--primary); margin-bottom:1rem;"></i>
+                        <h3>Pending Review</h3>
+                        <p style="color:var(--gray);">3 drafts waiting for your feedback.</p>
+                        <button class="btn btn-primary" style="margin-top:1rem;">View All</button>
                     </div>
-                    <div style="display:flex; justify-content:space-between; margin-top:1rem; color:var(--gray); font-size:0.875rem;">
-                        <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+                    <div class="card" style="padding:1.5rem; text-align:center;">
+                        <i class="fa-solid fa-circle-check"
+                            style="font-size:2.5rem; color:#10b981; margin-bottom:1rem;"></i>
+                        <h3>Approved</h3>
+                        <p style="color:var(--gray);">12 posts scheduled for publishing.</p>
+                        <button class="btn btn-outline" style="margin-top:1rem;">History</button>
+                    </div>
+                    <div class="card" style="padding:1.5rem; text-align:center;">
+                        <i class="fa-solid fa-circle-xmark"
+                            style="font-size:2.5rem; color:#ef4444; margin-bottom:1rem;"></i>
+                        <h3>Needs Edits</h3>
+                        <p style="color:var(--gray);">1 post requires your corrections.</p>
+                        <button class="btn btn-outline" style="margin-top:1rem;">Review Edits</button>
                     </div>
                 </div>
+                <div class="table-wrap" style="margin-top:2rem;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Platform</th>
+                                <th>Preview</th>
+                                <th>Author</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><i class="fa-brands fa-linkedin" style="color:#0a66c2;"></i></td>
+                                <td>Why Networking is Overrated...</td>
+                                <td>John Ghost</td>
+                                <td>Today</td>
+                                <td><span class="status-badge status-pending">Pending</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
-                <!-- RECENT ACTIVITY -->
-                <div class="card">
-                    <h3 class="card-title">Recent Activity</h3>
-                    <div style="display:flex; flex-direction:column; gap:1rem; margin-top:1rem;">
-                        <div style="display:flex; gap:1rem; align-items:flex-start;">
-                            <div style="width:10px; height:10px; border-radius:50%; background:var(--primary); margin-top:5px;"></div>
-                            <div>
-                                <p style="margin:0; font-weight:500;">Post Approved</p>
-                                <p style="margin:0; color:var(--gray); font-size:0.875rem;">"The future of B2B SaaS..." scheduled for tomorrow.</p>
-                            </div>
+            <!-- CALENDAR SECTION -->
+            <div id="calendar-section" class="content-section" style="display:none;">
+                <div class="grid-3">
+                    <div class="card" style="padding:1.5rem;">
+                        <h4>Upcoming This Week</h4>
+                        <ul style="list-style:none; padding:0; margin-top:1rem;">
+                            <li style="padding:0.5rem 0; border-bottom:1px solid var(--border);">Mon: LinkedIn (Post)
+                            </li>
+                            <li style="padding:0.5rem 0; border-bottom:1px solid var(--border);">Wed: Twitter (Thread)
+                            </li>
+                            <li style="padding:0.5rem 0;">Fri: Newsletter</li>
+                        </ul>
+                    </div>
+                    <div class="card" style="padding:1.5rem;">
+                        <h4>Content Gaps</h4>
+                        <p style="color:var(--gray); margin-top:0.5rem;">You have 2 days with no scheduled content.</p>
+                        <button class="btn btn-primary" style="margin-top:1rem;">Fill Gaps</button>
+                    </div>
+                    <div class="card" style="padding:1.5rem;">
+                        <h4>Calendar Sync</h4>
+                        <p style="color:var(--gray); margin-top:0.5rem;">Connected to Google Calendar.</p>
+                        <button class="btn btn-outline" style="margin-top:1rem;">Manage</button>
+                    </div>
+                </div>
+                <div class="card mt-4"
+                    style="height:300px; display:flex; align-items:center; justify-content:center; color:var(--gray);">
+                    <p><i class="fa-solid fa-calendar-days"></i> Full Calendar View Placeholder</p>
+                </div>
+            </div>
+
+            <!-- ANALYTICS SECTION -->
+            <div id="analytics-section" class="content-section" style="display:none;">
+                <div class="grid-3">
+                    <div class="card" style="padding:1.5rem;">
+                        <h4>Platform Split</h4>
+                        <div style="height:150px; display:flex; align-items:center; justify-content:center;">
+                            <p style="color:var(--gray);">LinkedIn: 70% | Twitter: 30%</p>
                         </div>
-                        <div style="display:flex; gap:1rem; align-items:flex-start;">
-                            <div style="width:10px; height:10px; border-radius:50%; background:#10b981; margin-top:5px;"></div>
-                            <div>
-                                <p style="margin:0; font-weight:500;">Post Published</p>
-                                <p style="margin:0; color:var(--gray); font-size:0.875rem;">Generated 4,500 impressions in 2 hours.</p>
-                            </div>
+                    </div>
+                    <div class="card" style="padding:1.5rem;">
+                        <h4>Top Performer</h4>
+                        <p style="font-weight:500; margin-top:1rem;">"The SaaS Playbook"</p>
+                        <p style="color:var(--gray);">12.4k Impressions</p>
+                    </div>
+                    <div class="card" style="padding:1.5rem;">
+                        <h4>Conversion Rate</h4>
+                        <h3 style="font-size:2rem; margin-top:0.5rem;">2.4%</h3>
+                        <p style="color:#10b981;"><i class="fa-solid fa-caret-up"></i> +0.5%</p>
+                    </div>
+                </div>
+                <div class="card mt-4" style="height:200px;">
+                    <h3 class="card-title">Audience Growth</h3>
+                    <!-- More charts would go here -->
+                </div>
+            </div>
+
+            <!-- BRAND VOICE SECTION -->
+            <div id="brand-voice-section" class="content-section" style="display:none;">
+                <div class="grid-3">
+                    <div class="card" style="padding:1.5rem;">
+                        <h4>Tone Settings</h4>
+                        <div style="margin-top:1rem;">
+                            <span class="status-badge status-approved">Professional</span>
+                            <span class="status-badge status-approved">Authoritative</span>
                         </div>
-                        <div style="display:flex; gap:1rem; align-items:flex-start;">
-                            <div style="width:10px; height:10px; border-radius:50%; background:#f59e0b; margin-top:5px;"></div>
-                            <div>
-                                <p style="margin:0; font-weight:500;">Draft Ready for Review</p>
-                                <p style="margin:0; color:var(--gray); font-size:0.875rem;">Writer submitted 3 new drafts.</p>
-                            </div>
-                        </div>
+                    </div>
+                    <div class="card" style="padding:1.5rem;">
+                        <h4>Banned Words</h4>
+                        <p style="color:var(--gray); margin-top:0.5rem;">Synergy, Disrupt, Revolutionary</p>
+                    </div>
+                    <div class="card" style="padding:1.5rem;">
+                        <h4>Core Pillars</h4>
+                        <p style="color:var(--gray); margin-top:0.5rem;">Transparency, Speed, Value</p>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <h3 class="card-title">Voice AI Training</h3>
+                    <p>Our AI is trained on 42 of your previous posts to match your unique writing style.</p>
+                </div>
+            </div>
+
+            <!-- NOTIFICATIONS SECTION -->
+            <div id="notifications-section" class="content-section" style="display:none;">
+                <div class="grid-3">
+                    <div class="card" style="padding:1.5rem;">
+                        <h4>New Mentions</h4>
+                        <h3 style="margin-top:0.5rem;">14</h3>
+                    </div>
+                    <div class="card" style="padding:1.5rem;">
+                        <h4>System Alerts</h4>
+                        <p style="color:#10b981; margin-top:0.5rem;">All systems operational.</p>
+                    </div>
+                    <div class="card" style="padding:1.5rem;">
+                        <h4>Messages</h4>
+                        <p style="color:var(--gray); margin-top:0.5rem;">2 unread from strategy team.</p>
+                    </div>
+                </div>
+                <div class="card mt-4" style="padding:0;">
+                    <div style="padding:1rem; border-bottom:1px solid var(--border);">
+                        <p style="margin:0; font-weight:500;">Strategy Update</p>
+                        <p style="margin:0; color:var(--gray); font-size:0.875rem;">The Q2 content plan is ready for
+                            review.</p>
+                    </div>
+                    <div style="padding:1rem;">
+                        <p style="margin:0; font-weight:500;">Billing Successful</p>
+                        <p style="margin:0; color:var(--gray); font-size:0.875rem;">Your monthly subscription has been
+                            renewed.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- CONTENT APPROVAL TABLE -->
-            <h3 style="margin-top:2rem;">Content Pending Approval</h3>
-            <div class="table-wrap">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Platform</th>
-                            <th>Content Preview</th>
-                            <th>Suggested Date</th>
-                            <th>Status</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><i class="fa-brands fa-linkedin" style="color:#0a66c2; font-size:1.5rem;"></i></td>
-                            <td><span style="font-weight:500;">Most founders make this one mistake...</span></td>
-                            <td>May 10, 9:00 AM</td>
-                            <td><span class="status-badge status-pending">Pending Review</span></td>
-                            <td>
-                                <button class="btn btn-outline" style="padding:0.25rem 0.75rem; font-size:0.875rem;">Review</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa-brands fa-twitter" style="color:#1da1f2; font-size:1.5rem;"></i></td>
-                            <td><span style="font-weight:500;">Thread: How we scaled to $1M ARR...</span></td>
-                            <td>May 11, 2:00 PM</td>
-                            <td><span class="status-badge status-pending">Pending Review</span></td>
-                            <td>
-                                <button class="btn btn-outline" style="padding:0.25rem 0.75rem; font-size:0.875rem;">Review</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa-brands fa-linkedin" style="color:#0a66c2; font-size:1.5rem;"></i></td>
-                            <td><span style="font-weight:500;">The real difference between managers and leaders...</span></td>
-                            <td>May 13, 8:30 AM</td>
-                            <td><span class="status-badge status-approved">Approved</span></td>
-                            <td>
-                                <button class="btn btn-outline" style="padding:0.25rem 0.75rem; font-size:0.875rem; border-color:transparent; color:var(--gray);" disabled>Scheduled</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <!-- SETTINGS SECTION -->
+            <div id="settings-section" class="content-section" style="display:none;">
+                <div class="grid-3">
+                    <div class="card" style="padding:1.5rem;">
+                        <h4>Profile Settings</h4>
+                        <button class="btn btn-outline" style="margin-top:1rem; width:100%;">Edit Profile</button>
+                    </div>
+                    <div class="card" style="padding:1.5rem;">
+                        <h4>Security</h4>
+                        <button class="btn btn-outline" style="margin-top:1rem; width:100%;">Change Password</button>
+                    </div>
+                    <div class="card" style="padding:1.5rem;">
+                        <h4>Connected Apps</h4>
+                        <button class="btn btn-outline" style="margin-top:1rem; width:100%;">Manage API</button>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <h3 class="card-title">Subscription Plan</h3>
+                    <p>Current Plan: <strong>Executive Pro</strong></p>
+                    <p style="color:var(--gray);">Next billing date: June 1, 2026</p>
+                </div>
             </div>
 
         </div>
@@ -282,16 +599,6 @@
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/dashboard.js"></script>
-    <script>
-        // Inline script to handle mobile sidebar specific to dashboard
-        // A bit of redundancy but avoids polluting main.js heavily if not needed
-        const sidebarTog = document.getElementById('sidebar-toggle');
-        const sidebar = document.querySelector('.dashboard-sidebar');
-        if(sidebarTog) {
-            sidebarTog.addEventListener('click', () => {
-                sidebar.classList.toggle('active');
-            });
-        }
-    </script>
 </body>
+
 </html>

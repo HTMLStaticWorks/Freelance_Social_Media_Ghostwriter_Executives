@@ -7,9 +7,10 @@
     <title>Home - Freelance Social Media Ghostwriter</title>
     <meta name="description" content="Premium SaaS + Executive Branding + Social Media Analytics Platform">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%236c63ff' d='M290.7 93.4c22.2-22.2 58.2-22.2 80.4 0l47.4 47.4c22.2 22.2 22.2 58.2 0 80.4l-219.3 219.3c-6 6-13.4 10.5-21.6 12.7l-79.9 22c-15.4 4.2-29.6-10-25.4-25.4l22-79.9c2.2-8.1 6.7-15.5 12.7-21.6L290.7 93.4zM512 48c0-26.5-21.5-48-48-48s-48 21.5-48 48 21.5 48 48 48 48-21.5 48-48zm-16 320l-128-128c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l128 128c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9z'/></svg>">
 </head>
 
 <body>
@@ -30,6 +31,16 @@
                 <a href="pricing.html">Pricing</a>
                 <a href="contact.html">Contact</a>
                 <a href="dashboard.html">Dashboard</a>
+                <div class="mobile-nav-actions">
+                    <button class="theme-toggle" aria-label="Toggle Dark Mode">
+                        <i class="fa-solid fa-moon"></i>
+                        <i class="fa-solid fa-sun" style="display:none;"></i>
+                    </button>
+                    <button class="rtl-toggle" aria-label="Toggle RTL">
+                        <i class="fa-solid fa-right-left"></i>
+                    </button>
+                    <a href="login.html" class="btn btn-outline" style="border: 2px solid var(--primary); color: var(--primary);">Login</a>
+                </div>
             </div>
             <div class="nav-actions">
                 <button class="theme-toggle" aria-label="Toggle Dark Mode">
@@ -39,7 +50,8 @@
                 <button class="rtl-toggle" aria-label="Toggle RTL">
                     <i class="fa-solid fa-right-left"></i>
                 </button>
-                <a href="login.html" class="btn btn-outline" style="padding: 0.5rem 1rem; border: 2px solid var(--primary); color: var(--primary);">Login</a>
+                <a href="login.html" class="btn btn-outline"
+                    style="padding: 0.5rem 1rem; border: 2px solid var(--primary); color: var(--primary);">Login</a>
                 <button class="mobile-menu-btn">
                     <i class="fa-solid fa-bars"></i>
                 </button>
@@ -59,7 +71,7 @@
                             class="fa-solid fa-arrow-right"></i></a>
                     <a href="services.html" class="btn btn-outline">Explore Services</a>
                 </div>
-                <div style="margin-top:2rem; display:flex; align-items:center; gap:1rem; color:var(--gray);">
+                <div class="hero-rating" style="margin-top:2rem; display:flex; align-items:center; gap:1rem; color:var(--gray);">
                     <div style="display:flex;">
                         <i class="fa-solid fa-star" style="color:#fbbf24;"></i>
                         <i class="fa-solid fa-star" style="color:#fbbf24;"></i>
@@ -115,7 +127,7 @@
             <div class="grid-4">
                 <div class="card card-flush">
                     <div class="card-img-wrap">
-                        <img src="assets/images/blog-thumb.png" alt="Ghostwriting">
+                        <img src="assets/images/linkedin-service.png" alt="Ghostwriting">
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">Executive Ghostwriting</h3>
@@ -128,7 +140,7 @@
                 </div>
                 <div class="card card-flush">
                     <div class="card-img-wrap">
-                        <img src="assets/images/dashboard-mockup.png" alt="Brand Strategy">
+                        <img src="assets/images/brand-service.png" alt="Brand Strategy">
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">Brand Strategy</h3>
@@ -140,7 +152,7 @@
                 </div>
                 <div class="card card-flush">
                     <div class="card-img-wrap">
-                        <img src="assets/images/blog-thumb.png" alt="Content Management">
+                        <img src="assets/images/twitter-service.png" alt="Content Management">
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">Content Pipeline</h3>
@@ -152,7 +164,7 @@
                 </div>
                 <div class="card card-flush">
                     <div class="card-img-wrap">
-                        <img src="assets/images/dashboard-mockup.png" alt="Analytics Reporting">
+                        <img src="assets/images/analytics-service.png" alt="Analytics Reporting">
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">Analytics & Reporting</h3>
@@ -224,7 +236,7 @@
                         perfectly."</p>
                     <div style="display:flex; align-items:center; gap:1rem;">
                         <img src="assets/images/avatar.png"
-                            style="width:50px; height:50px; border-radius:50%; object-fit:cover;">
+                            style="width:50px; height:50px; border-radius:50%; object-fit:cover; object-position: center top;">
                         <div>
                             <h4 style="margin:0; font-size:1rem;">Michael Chen</h4>
                             <span style="color:var(--gray); font-size:0.875rem;">CEO, TechFlow</span>
@@ -236,8 +248,8 @@
                     <p class="card-text">"I saved 10 hours a week and my LinkedIn engagement tripled. Incredible
                         service."</p>
                     <div style="display:flex; align-items:center; gap:1rem;">
-                        <img src="assets/images/avatar.png"
-                            style="width:50px; height:50px; border-radius:50%; object-fit:cover;">
+                        <img src="assets/images/women.png"
+                            style="width:50px; height:50px; border-radius:50%; object-fit:cover; object-position: center top;">
                         <div>
                             <h4 style="margin:0; font-size:1rem;">Sarah Jenkins</h4>
                             <span style="color:var(--gray); font-size:0.875rem;">Founder, Elevate</span>
@@ -249,8 +261,8 @@
                     <p class="card-text">"The analytics reporting is enterprise-grade. I know exactly what's working."
                     </p>
                     <div style="display:flex; align-items:center; gap:1rem;">
-                        <img src="assets/images/avatar.png"
-                            style="width:50px; height:50px; border-radius:50%; object-fit:cover;">
+                        <img src="assets/images/prof-image.png"
+                            style="width:50px; height:50px; border-radius:50%; object-fit:cover; object-position: center top;">
                         <div>
                             <h4 style="margin:0; font-size:1rem;">David Ross</h4>
                             <span style="color:var(--gray); font-size:0.875rem;">Managing Partner</span>
@@ -261,8 +273,8 @@
                     <div style="color:#fbbf24; margin-bottom:1rem;">★★★★★</div>
                     <p class="card-text">"Premium quality writing that feels 100% authentic to my personal brand."</p>
                     <div style="display:flex; align-items:center; gap:1rem;">
-                        <img src="assets/images/avatar.png"
-                            style="width:50px; height:50px; border-radius:50%; object-fit:cover;">
+                        <img src="assets/images/women2.png"
+                            style="width:50px; height:50px; border-radius:50%; object-fit:cover; object-position: center top;">
                         <div>
                             <h4 style="margin:0; font-size:1rem;">Elena Rodriguez</h4>
                             <span style="color:var(--gray); font-size:0.875rem;">CMO, GlobalReach</span>
@@ -274,7 +286,7 @@
     </section>
 
     <!-- 6. CTA + NEWSLETTER -->
-    <section class="section-padding" style="position:relative; overflow:hidden;">
+    <section class="section-padding cta-section" style="position:relative; overflow:hidden;">
         <div
             style="position:absolute; top:0; left:0; width:100%; height:100%; background:var(--gradient); opacity:0.1; z-index:-1;">
         </div>
@@ -301,15 +313,16 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-widget">
-                    <a href="index.html" class="logo" style="color:#fff; margin-bottom:1.5rem;">
+                    <a href="index.html" class="logo" style="color:var(--heading-color); margin-bottom:1.5rem;">
                         <i class="fa-solid fa-pen-nib"></i>
                         Ghost<span style="color:var(--primary);">Writer</span>
                     </a>
                     <p style="color:var(--gray); margin-bottom:1.5rem;">The premium platform for executive branding and
                         content analytics.</p>
                     <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>

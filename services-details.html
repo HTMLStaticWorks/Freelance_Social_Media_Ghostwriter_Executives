@@ -6,9 +6,10 @@
     <title>Service Details - Freelance Social Media Ghostwriter</title>
     <meta name="description" content="Detailed overview of our premium executive ghostwriting service.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
+	<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%236c63ff' d='M290.7 93.4c22.2-22.2 58.2-22.2 80.4 0l47.4 47.4c22.2 22.2 22.2 58.2 0 80.4l-219.3 219.3c-6 6-13.4 10.5-21.6 12.7l-79.9 22c-15.4 4.2-29.6-10-25.4-25.4l22-79.9c2.2-8.1 6.7-15.5 12.7-21.6L290.7 93.4zM512 48c0-26.5-21.5-48-48-48s-48 21.5-48 48 21.5 48 48 48 48-21.5 48-48zm-16 320l-128-128c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l128 128c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9z'/></svg>">
 </head>
 <body>
 
@@ -28,6 +29,16 @@
                 <a href="pricing.html">Pricing</a>
                 <a href="contact.html">Contact</a>
                 <a href="dashboard.html">Dashboard</a>
+                <div class="mobile-nav-actions">
+                    <button class="theme-toggle" aria-label="Toggle Dark Mode">
+                        <i class="fa-solid fa-moon"></i>
+                        <i class="fa-solid fa-sun" style="display:none;"></i>
+                    </button>
+                    <button class="rtl-toggle" aria-label="Toggle RTL">
+                        <i class="fa-solid fa-right-left"></i>
+                    </button>
+                    <a href="login.html" class="btn btn-outline" style="border: 2px solid var(--primary); color: var(--primary);">Login</a>
+                </div>
             </div>
             <div class="nav-actions">
                 <button class="theme-toggle" aria-label="Toggle Dark Mode">
@@ -48,8 +59,8 @@
     <!-- PAGE HEADER -->
     <div class="page-header" style="background:var(--gradient); color:#fff; padding:180px 0 100px;">
         <div class="container">
-            <h1 style="color:#fff;">Executive LinkedIn Ghostwriting</h1>
-            <p class="section-subtitle" style="color:rgba(255,255,255,0.8);">Dominating the B2B landscape with authoritative content.</p>
+            <h1 id="service-title" style="color:#fff;">Executive LinkedIn Ghostwriting</h1>
+            <p id="service-subtitle" class="section-subtitle" style="color:rgba(255,255,255,0.8);">Dominating the B2B landscape with authoritative content.</p>
         </div>
     </div>
 
@@ -59,31 +70,31 @@
             <div class="grid-2">
                 <div>
                     <h2 class="section-title">Service Overview</h2>
-                    <p style="color:var(--gray); font-size:1.125rem; margin-bottom:1.5rem;">LinkedIn is the premier network for executive branding. Our ghostwriting service is designed to position you as an industry thought leader, generating inbound leads and massive organic reach.</p>
-                    <p style="color:var(--gray); font-size:1.125rem; margin-bottom:1.5rem;">We don't just write posts; we architect a comprehensive content ecosystem tailored to your unique voice and business objectives.</p>
+                    <p id="service-text-1" style="color:var(--gray); font-size:1.125rem; margin-bottom:1.5rem;">LinkedIn is the premier network for executive branding. Our ghostwriting service is designed to position you as an industry thought leader, generating inbound leads and massive organic reach.</p>
+                    <p id="service-text-2" style="color:var(--gray); font-size:1.125rem; margin-bottom:1.5rem;">We don't just write posts; we architect a comprehensive content ecosystem tailored to your unique voice and business objectives.</p>
                 </div>
                 <div>
-                    <img src="assets/images/dashboard-mockup.png" alt="Service Detail" style="border-radius:1rem; box-shadow:var(--shadow);">
+                    <img id="service-image" src="assets/images/linkedin-service.png" alt="Service Detail" style="border-radius:1rem; box-shadow:var(--shadow);">
                 </div>
             </div>
 
-            <div class="grid-4 mt-8">
-                <div class="card">
+            <div class="grid-4 mt-12">
+                <div class="card text-center">
                     <i class="fa-solid fa-pen-to-square mb-4" style="font-size:2rem; color:var(--primary);"></i>
                     <h3 class="card-title">Custom Crafting</h3>
                     <p class="card-text">Every word is tailored to sound exactly like you, only more polished.</p>
                 </div>
-                <div class="card">
+                <div class="card text-center">
                     <i class="fa-solid fa-magnifying-glass-chart mb-4" style="font-size:2rem; color:var(--primary);"></i>
                     <h3 class="card-title">SEO Optimized</h3>
                     <p class="card-text">Strategic keyword placement to ensure your profile ranks high.</p>
                 </div>
-                <div class="card">
+                <div class="card text-center">
                     <i class="fa-solid fa-comments mb-4" style="font-size:2rem; color:var(--primary);"></i>
                     <h3 class="card-title">Engagement Prep</h3>
                     <p class="card-text">We write comments for you to easily paste and engage with others.</p>
                 </div>
-                <div class="card">
+                <div class="card text-center">
                     <i class="fa-solid fa-chart-pie mb-4" style="font-size:2rem; color:var(--primary);"></i>
                     <h3 class="card-title">Deep Analytics</h3>
                     <p class="card-text">Track impressions, profile views, and link clicks securely.</p>
@@ -123,32 +134,7 @@
         </div>
     </section>
 
-    <!-- TESTIMONIALS (4 CARDS) -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="text-center">
-                <h2 class="section-title">Client Success</h2>
-            </div>
-            <div class="grid-4 mt-4">
-                <div class="card">
-                    <div style="color:#fbbf24; margin-bottom:1rem;">★★★★★</div>
-                    <p class="card-text">"Generated $2M in pipeline from 3 viral posts."</p>
-                </div>
-                <div class="card">
-                    <div style="color:#fbbf24; margin-bottom:1rem;">★★★★★</div>
-                    <p class="card-text">"Grew from 2k to 50k followers in 10 months."</p>
-                </div>
-                <div class="card">
-                    <div style="color:#fbbf24; margin-bottom:1rem;">★★★★★</div>
-                    <p class="card-text">"The tone is exactly me, just better articulated."</p>
-                </div>
-                <div class="card">
-                    <div style="color:#fbbf24; margin-bottom:1rem;">★★★★★</div>
-                    <p class="card-text">"Best ROI of any marketing spend this year."</p>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- PRICING PREVIEW CTA -->
     <section class="section-padding text-center" style="background:var(--card-bg);">
@@ -164,11 +150,48 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-widget">
-                    <a href="index.html" class="logo" style="color:#fff; margin-bottom:1.5rem;">
+                    <a href="index.html" class="logo" style="color:var(--heading-color); margin-bottom:1.5rem;">
                         <i class="fa-solid fa-pen-nib"></i>
                         Ghost<span style="color:var(--primary);">Writer</span>
                     </a>
-                    <p style="color:var(--gray); margin-bottom:1.5rem;">The premium platform for executive branding and content analytics.</p>
+                    <p style="color:var(--gray); margin-bottom:1.5rem;">The premium platform for executive branding and
+                        content analytics.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-widget">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services-details.html">Executive Ghostwriting</a></li>
+                        <li><a href="services-details.html">Brand Strategy</a></li>
+                        <li><a href="services-details.html">Content Management</a></li>
+                        <li><a href="services-details.html">Analytics Reporting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li style="color:var(--gray);"><i class="fa-solid fa-envelope" style="margin-right:0.5rem;"></i>
+                            hello@ghostwriter.com</li>
+                        <li style="color:var(--gray);"><i class="fa-solid fa-phone" style="margin-right:0.5rem;"></i> +1
+                            (555) 123-4567</li>
+                        <li style="color:var(--gray);"><i class="fa-solid fa-location-dot"
+                                style="margin-right:0.5rem;"></i> 100 Innovation Drive, SF</li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -177,6 +200,69 @@
         </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const servicesData = {
+                'linkedin': {
+                    title: 'LinkedIn Ghostwriting',
+                    subtitle: 'Dominating the B2B landscape with authoritative content.',
+                    text1: 'LinkedIn is the premier network for executive branding. Our ghostwriting service is designed to position you as an industry thought leader, generating inbound leads and massive organic reach.',
+                    text2: 'We don\'t just write posts; we architect a comprehensive content ecosystem tailored to your unique voice and business objectives.',
+                    image: 'assets/images/linkedin-service.png'
+                },
+                'twitter': {
+                    title: 'Twitter/X Growth',
+                    subtitle: 'Architecting viral threads and daily engagement.',
+                    text1: 'Twitter/X requires a fast-paced, high-engagement strategy. We craft viral threads and daily insights that position you at the center of industry conversations.',
+                    text2: 'Our team monitors trends in real-time to ensure your voice is always relevant and impactful, driving massive organic growth and network expansion.',
+                    image: 'assets/images/twitter-service.png'
+                },
+                'newsletter': {
+                    title: 'Newsletter Writing',
+                    subtitle: 'Building deep connections through long-form mastery.',
+                    text1: 'Build a direct connection with your audience through high-quality long-form content. We handle everything from research to drafting and distribution for your Substack or email list.',
+                    text2: 'Our newsletters are designed to provide immense value, keeping your subscribers engaged and establishing your authority as a subject matter expert.',
+                    image: 'assets/images/newsletter-service.png'
+                },
+                'brand': {
+                    title: 'Brand Strategy',
+                    subtitle: 'Defining your unique voice in a crowded digital world.',
+                    text1: 'Your brand is more than just a profile. We develop a robust strategy including visual identity, tone of voice, and content pillars to ensure consistent excellence.',
+                    text2: 'We map out your long-term positioning to ensure every piece of content serves a strategic purpose in building your professional legacy.',
+                    image: 'assets/images/brand-service.png'
+                },
+                'profile': {
+                    title: 'Profile Optimization',
+                    subtitle: 'Converting profile visitors into high-value connections.',
+                    text1: 'First impressions are everything. We optimize your headers, bios, and featured sections to convert profile visitors into followers and inbound leads.',
+                    text2: 'Our comprehensive audit and overhaul ensure that every aspect of your social presence is aligned with your current professional goals.',
+                    image: 'assets/images/profile-service.png'
+                },
+                'analytics': {
+                    title: 'Analytics Dashboard',
+                    subtitle: 'Data-driven insights for exponential growth.',
+                    text1: 'Data-driven growth is our philosophy. Access your personalized dashboard to track every metric that matters, from reach to conversion, with clear ROI reporting.',
+                    text2: 'We translate complex data into actionable insights, allowing us to continuously refine your strategy for maximum performance.',
+                    image: 'assets/images/analytics-service.png'
+                }
+            };
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const serviceKey = urlParams.get('service');
+
+            if (serviceKey && servicesData[serviceKey]) {
+                const data = servicesData[serviceKey];
+                document.getElementById('service-title').textContent = data.title;
+                document.getElementById('service-subtitle').textContent = data.subtitle;
+                document.getElementById('service-text-1').textContent = data.text1;
+                document.getElementById('service-text-2').textContent = data.text2;
+                document.getElementById('service-image').src = data.image;
+                document.getElementById('service-image').alt = data.title;
+                document.title = `${data.title} - Service Details`;
+            }
+        });
+    </script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+

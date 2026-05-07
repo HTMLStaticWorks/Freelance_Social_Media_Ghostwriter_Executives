@@ -6,9 +6,10 @@
     <title>Blog - Freelance Social Media Ghostwriter</title>
     <meta name="description" content="Insights on executive branding and social media strategy.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
+	<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%236c63ff' d='M290.7 93.4c22.2-22.2 58.2-22.2 80.4 0l47.4 47.4c22.2 22.2 22.2 58.2 0 80.4l-219.3 219.3c-6 6-13.4 10.5-21.6 12.7l-79.9 22c-15.4 4.2-29.6-10-25.4-25.4l22-79.9c2.2-8.1 6.7-15.5 12.7-21.6L290.7 93.4zM512 48c0-26.5-21.5-48-48-48s-48 21.5-48 48 21.5 48 48 48 48-21.5 48-48zm-16 320l-128-128c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l128 128c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9z'/></svg>">
 </head>
 <body>
 
@@ -28,6 +29,16 @@
                 <a href="pricing.html">Pricing</a>
                 <a href="contact.html">Contact</a>
                 <a href="dashboard.html">Dashboard</a>
+                <div class="mobile-nav-actions">
+                    <button class="theme-toggle" aria-label="Toggle Dark Mode">
+                        <i class="fa-solid fa-moon"></i>
+                        <i class="fa-solid fa-sun" style="display:none;"></i>
+                    </button>
+                    <button class="rtl-toggle" aria-label="Toggle RTL">
+                        <i class="fa-solid fa-right-left"></i>
+                    </button>
+                    <a href="login.html" class="btn btn-outline" style="border: 2px solid var(--primary); color: var(--primary);">Login</a>
+                </div>
             </div>
             <div class="nav-actions">
                 <button class="theme-toggle" aria-label="Toggle Dark Mode">
@@ -46,7 +57,7 @@
     </nav>
 
     <!-- PAGE HEADER -->
-    <div class="page-header">
+    <div class="page-header blog-header">
         <div class="container">
             <h1>Executive Insights</h1>
             <p class="section-subtitle">Strategies and trends for modern thought leaders.</p>
@@ -57,13 +68,14 @@
         </div>
     </div>
 
+
     <!-- 6 BLOG CARDS -->
-    <section class="section-padding" style="padding-top:0;">
+    <section class="section-padding">
         <div class="container">
             <div class="grid-6">
-                <div class="card">
+                <div class="card card-flush">
                     <div class="card-img-wrap">
-                        <img src="assets/images/blog-thumb.png" alt="Blog 1">
+                        <img src="assets/images/blog-1.png" alt="Blog 1">
                     </div>
                     <div class="card-content">
                         <span style="color:var(--primary); font-size:0.875rem; font-weight:600; margin-bottom:0.5rem; display:block;">LinkedIn Strategy</span>
@@ -74,9 +86,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card card-flush">
                     <div class="card-img-wrap">
-                        <img src="assets/images/dashboard-mockup.png" alt="Blog 2">
+                        <img src="assets/images/blog-2.png" alt="Blog 2">
                     </div>
                     <div class="card-content">
                         <span style="color:var(--primary); font-size:0.875rem; font-weight:600; margin-bottom:0.5rem; display:block;">Analytics</span>
@@ -87,9 +99,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card card-flush">
                     <div class="card-img-wrap">
-                        <img src="assets/images/blog-thumb.png" alt="Blog 3">
+                        <img src="assets/images/blog-3.png" alt="Blog 3" style="object-position: top;">
                     </div>
                     <div class="card-content">
                         <span style="color:var(--primary); font-size:0.875rem; font-weight:600; margin-bottom:0.5rem; display:block;">Branding</span>
@@ -100,9 +112,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card card-flush">
                     <div class="card-img-wrap">
-                        <img src="assets/images/dashboard-mockup.png" alt="Blog 4">
+                        <img src="assets/images/blog-4.png" alt="Blog 4">
                     </div>
                     <div class="card-content">
                         <span style="color:var(--primary); font-size:0.875rem; font-weight:600; margin-bottom:0.5rem; display:block;">Growth</span>
@@ -113,9 +125,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card card-flush">
                     <div class="card-img-wrap">
-                        <img src="assets/images/blog-thumb.png" alt="Blog 5">
+                        <img src="assets/images/blog-5.png" alt="Blog 5">
                     </div>
                     <div class="card-content">
                         <span style="color:var(--primary); font-size:0.875rem; font-weight:600; margin-bottom:0.5rem; display:block;">Content</span>
@@ -126,9 +138,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card card-flush">
                     <div class="card-img-wrap">
-                        <img src="assets/images/dashboard-mockup.png" alt="Blog 6">
+                        <img src="assets/images/blog-6.png" alt="Blog 6">
                     </div>
                     <div class="card-content">
                         <span style="color:var(--primary); font-size:0.875rem; font-weight:600; margin-bottom:0.5rem; display:block;">Ghostwriting</span>
@@ -138,6 +150,33 @@
                             <a href="blog-details.html" class="btn btn-outline" style="width:100%;">Read Article</a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREMIUM RESOURCES -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="grid-2" style="align-items: center;">
+                <div class="resources-info">
+                    <h2 class="section-title" style="text-align: left;">Elevate Your Strategy</h2>
+                    <p class="section-subtitle" style="margin-left: 0; text-align: left;">Download our exclusive guides and research reports designed for high-impact executives.</p>
+                    <ul style="margin-bottom: 2rem;">
+                        <li style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; color: var(--gray);">
+                            <i class="fa-solid fa-circle-check" style="color: var(--primary);"></i> 2026 Executive Branding Trends Report
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; color: var(--gray);">
+                            <i class="fa-solid fa-circle-check" style="color: var(--primary);"></i> The LinkedIn Hook Mastery Guide
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; color: var(--gray);">
+                            <i class="fa-solid fa-circle-check" style="color: var(--primary);"></i> Content Approval Workflow Templates
+                        </li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Browse All Resources</a>
+                </div>
+                <div>
+                    <img src="assets/images/resources.png" alt="Premium Resources" style="border-radius: 1rem; box-shadow: var(--shadow);">
                 </div>
             </div>
         </div>
@@ -162,10 +201,48 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-widget">
-                    <a href="index.html" class="logo" style="color:#fff; margin-bottom:1.5rem;">
+                    <a href="index.html" class="logo" style="color:var(--heading-color); margin-bottom:1.5rem;">
                         <i class="fa-solid fa-pen-nib"></i>
                         Ghost<span style="color:var(--primary);">Writer</span>
                     </a>
+                    <p style="color:var(--gray); margin-bottom:1.5rem;">The premium platform for executive branding and
+                        content analytics.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-widget">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services-details.html">Executive Ghostwriting</a></li>
+                        <li><a href="services-details.html">Brand Strategy</a></li>
+                        <li><a href="services-details.html">Content Management</a></li>
+                        <li><a href="services-details.html">Analytics Reporting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li style="color:var(--gray);"><i class="fa-solid fa-envelope" style="margin-right:0.5rem;"></i>
+                            hello@ghostwriter.com</li>
+                        <li style="color:var(--gray);"><i class="fa-solid fa-phone" style="margin-right:0.5rem;"></i> +1
+                            (555) 123-4567</li>
+                        <li style="color:var(--gray);"><i class="fa-solid fa-location-dot"
+                                style="margin-right:0.5rem;"></i> 100 Innovation Drive, SF</li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -177,3 +254,4 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+

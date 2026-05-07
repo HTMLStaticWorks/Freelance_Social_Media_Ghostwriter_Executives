@@ -2,14 +2,14 @@
    DARK MODE STYLES
    ========================================================================== */
 body.dark-mode {
-  --bg-color: #0f172a;
-  --text-color: #94a3b8;
-  --heading-color: #f8fafc;
-  --card-bg: #1e293b;
-  --nav-bg: rgba(15, 23, 42, 0.85);
-  --input-bg: #1e293b;
-  --input-border: #334155;
-  --border: rgba(255, 255, 255, 0.08);
+  --bg-color: #000000;
+  --text-color: #a1a1aa;
+  --heading-color: #ffffff;
+  --card-bg: #09090b;
+  --nav-bg: rgba(0, 0, 0, 0.9);
+  --input-bg: #09090b;
+  --input-border: #27272a;
+  --border: rgba(255, 255, 255, 0.1);
   --glass: rgba(255, 255, 255, 0.05);
 }
 
@@ -24,43 +24,113 @@ body.dark-mode .btn-outline:hover {
 }
 
 body.dark-mode .card {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  background: var(--card-bg);
 }
 
 body.dark-mode .card:hover {
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+  border-color: var(--primary);
 }
 
-body.dark-mode .navbar {
-  border-bottom: 1px solid var(--border);
+body.dark-mode .navbar a,
+body.dark-mode .navbar span,
+body.dark-mode .navbar i,
+body.dark-mode .dashboard-header,
+body.dark-mode .dashboard-header *,
+body.dark-mode .dashboard-sidebar,
+body.dark-mode .dashboard-sidebar a,
+body.dark-mode .dashboard-sidebar span,
+body.dark-mode .dashboard-sidebar i {
+    color: #ffffff !important;
+}
+
+body.dark-mode .navbar .nav-links a:hover,
+body.dark-mode .navbar .nav-links a.active,
+body.dark-mode .dashboard-sidebar a:hover,
+body.dark-mode .dashboard-sidebar a.active {
+    color: var(--primary) !important;
 }
 
 body.dark-mode .accordion-item {
   border-color: var(--border);
+  background: var(--card-bg);
 }
 
 body.dark-mode .accordion-header {
   background: var(--card-bg);
+  color: var(--heading-color);
 }
 
 body.dark-mode .footer {
+  background: #000000;
   border-top: 1px solid var(--border);
 }
 
 body.dark-mode .stats-card,
 body.dark-mode .pricing-card,
-body.dark-mode .dashboard-card {
+body.dark-mode .dashboard-card,
+body.dark-mode .content-section {
   background: var(--card-bg);
   border-color: var(--border);
 }
 
+body.dark-mode .page-header {
+  background-color: #000000;
+}
+
+/* Darken overlays on header images */
+body.dark-mode .page-header.about-header,
+body.dark-mode .page-header.services-header,
+body.dark-mode .page-header.blog-header,
+body.dark-mode .page-header.pricing-header,
+body.dark-mode .page-header.contact-header {
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
 /* Fix forms for dark mode */
+body.dark-mode .pricing-card,
+body.dark-mode .pricing-card *,
+body.dark-mode .comparison-table,
+body.dark-mode .comparison-table *,
+body.dark-mode .page-header.pricing-header * {
+    color: #ffffff !important;
+}
+
+body.dark-mode .pricing-card .btn-outline {
+    border-color: #ffffff !important;
+}
+
+body.dark-mode .pricing-card .btn-outline:hover {
+    background: var(--primary) !important;
+    color: #ffffff !important;
+}
+
 body.dark-mode .form-control {
   color: var(--heading-color);
+  background: var(--input-bg);
+  border-color: var(--input-border);
+}
+
+body.dark-mode .form-control:focus {
+    background: #000;
 }
 
 body.dark-mode .form-control::placeholder {
-  color: #64748b;
+  color: #52525b;
+}
+
+/* Table styles for dark mode */
+body.dark-mode table th {
+    background: rgba(255,255,255,0.02);
+    color: var(--heading-color);
+}
+
+body.dark-mode .comparison-wrap,
+body.dark-mode .table-wrap {
+    background: var(--card-bg);
+    border-color: var(--border);
 }
 
 /* Theme toggle icon animation */

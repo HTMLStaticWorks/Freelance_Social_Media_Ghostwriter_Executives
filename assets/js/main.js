@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Dark Mode Toggle
-  const themeToggle = document.querySelector('.theme-toggle');
+  const themeToggles = document.querySelectorAll('.theme-toggle');
   const body = document.body;
   
   // Check local storage or system preference
@@ -39,32 +39,36 @@ document.addEventListener('DOMContentLoaded', () => {
     body.classList.add('dark-mode');
   }
 
-  if (themeToggle) {
+  if (themeToggles.length > 0) {
     const updateThemeIcons = (isDark) => {
-      const moonIcon = themeToggle.querySelector('.fa-moon');
-      const sunIcon = themeToggle.querySelector('.fa-sun');
-      if (isDark) {
-        if(moonIcon) moonIcon.style.display = 'none';
-        if(sunIcon) sunIcon.style.display = 'inline-block';
-      } else {
-        if(moonIcon) moonIcon.style.display = 'inline-block';
-        if(sunIcon) sunIcon.style.display = 'none';
-      }
+      themeToggles.forEach(toggle => {
+        const moonIcon = toggle.querySelector('.fa-moon');
+        const sunIcon = toggle.querySelector('.fa-sun');
+        if (isDark) {
+          if(moonIcon) moonIcon.style.display = 'none';
+          if(sunIcon) sunIcon.style.display = 'inline-block';
+        } else {
+          if(moonIcon) moonIcon.style.display = 'inline-block';
+          if(sunIcon) sunIcon.style.display = 'none';
+        }
+      });
     };
 
     // Initial icon state
     updateThemeIcons(body.classList.contains('dark-mode'));
 
-    themeToggle.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
-      const isDark = body.classList.contains('dark-mode');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      updateThemeIcons(isDark);
+    themeToggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        const isDark = body.classList.contains('dark-mode');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        updateThemeIcons(isDark);
+      });
     });
   }
 
   // RTL Toggle
-  const rtlToggle = document.querySelector('.rtl-toggle');
+  const rtlToggles = document.querySelectorAll('.rtl-toggle');
   
   const currentDir = localStorage.getItem('dir');
   if (currentDir === 'rtl') {
@@ -72,16 +76,18 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.setAttribute('dir', 'rtl');
   }
 
-  if (rtlToggle) {
-    rtlToggle.addEventListener('click', () => {
-      body.classList.toggle('rtl');
-      if (body.classList.contains('rtl')) {
-        localStorage.setItem('dir', 'rtl');
-        document.documentElement.setAttribute('dir', 'rtl');
-      } else {
-        localStorage.setItem('dir', 'ltr');
-        document.documentElement.setAttribute('dir', 'ltr');
-      }
+  if (rtlToggles.length > 0) {
+    rtlToggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        body.classList.toggle('rtl');
+        if (body.classList.contains('rtl')) {
+          localStorage.setItem('dir', 'rtl');
+          document.documentElement.setAttribute('dir', 'rtl');
+        } else {
+          localStorage.setItem('dir', 'ltr');
+          document.documentElement.setAttribute('dir', 'ltr');
+        }
+      });
     });
   }
 
@@ -161,4 +167,37 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Blog Details Logic
+  const blogCards = document.querySelectorAll('.card');
+  if (blogCards.length > 0 && currentPage === 'blog.html') {
+    blogCards.forEach(card => {
+      const btn = card.querySelector('.btn-outline');
+      if (btn && btn.innerText.includes('Read Article')) {
+        btn.addEventListener('click', (e) => {
+          const img = card.querySelector('.card-img-wrap img')?.src;
+          const category = card.querySelector('span')?.innerText;
+          const title = card.querySelector('.card-title')?.innerText;
+          const description = card.querySelector('.card-text')?.innerText;
+
+          const blogData = { img, category, title, description };
+          localStorage.setItem('selectedBlog', JSON.stringify(blogData));
+        });
+      }
+    });
+  }
+
+  if (currentPage === 'blog-details.html') {
+    const blogData = JSON.parse(localStorage.getItem('selectedBlog'));
+    if (blogData) {
+      const detailCategory = document.getElementById('blog-category');
+      const detailTitle = document.getElementById('blog-title');
+      const detailImg = document.getElementById('blog-image');
+      const detailFirstPara = document.getElementById('blog-description');
+
+      if (detailCategory) detailCategory.innerText = blogData.category || 'Executive Insights';
+      if (detailTitle) detailTitle.innerText = blogData.title || 'How to Hook B2B Buyers in 3 Lines';
+      if (detailImg) detailImg.src = blogData.img || 'assets/images/blog-thumb.png';
+      if (detailFirstPara) detailFirstPara.innerText = blogData.description || '';
+    }
+  }
 });

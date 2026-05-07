@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Platform - Freelance Social Media Ghostwriter</title>
     <meta name="description" content="Premium SaaS + Executive Branding + Social Media Analytics Platform">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
+	<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%236c63ff' d='M290.7 93.4c22.2-22.2 58.2-22.2 80.4 0l47.4 47.4c22.2 22.2 22.2 58.2 0 80.4l-219.3 219.3c-6 6-13.4 10.5-21.6 12.7l-79.9 22c-15.4 4.2-29.6-10-25.4-25.4l22-79.9c2.2-8.1 6.7-15.5 12.7-21.6L290.7 93.4zM512 48c0-26.5-21.5-48-48-48s-48 21.5-48 48 21.5 48 48 48 48-21.5 48-48zm-16 320l-128-128c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l128 128c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9z'/></svg>">
 </head>
+
 <body>
 
     <!-- NAVBAR -->
@@ -28,6 +31,16 @@
                 <a href="pricing.html">Pricing</a>
                 <a href="contact.html">Contact</a>
                 <a href="dashboard.html">Dashboard</a>
+                <div class="mobile-nav-actions">
+                    <button class="theme-toggle" aria-label="Toggle Dark Mode">
+                        <i class="fa-solid fa-moon"></i>
+                        <i class="fa-solid fa-sun" style="display:none;"></i>
+                    </button>
+                    <button class="rtl-toggle" aria-label="Toggle RTL">
+                        <i class="fa-solid fa-right-left"></i>
+                    </button>
+                    <a href="login.html" class="btn btn-outline" style="border: 2px solid var(--primary); color: var(--primary);">Login</a>
+                </div>
             </div>
             <div class="nav-actions">
                 <button class="theme-toggle" aria-label="Toggle Dark Mode">
@@ -37,7 +50,8 @@
                 <button class="rtl-toggle" aria-label="Toggle RTL">
                     <i class="fa-solid fa-right-left"></i>
                 </button>
-                <a href="login.html" class="btn btn-outline" style="padding: 0.5rem 1rem; border: 2px solid var(--primary); color: var(--primary);">Login</a>
+                <a href="login.html" class="btn btn-outline"
+                    style="padding: 0.5rem 1rem; border: 2px solid var(--primary); color: var(--primary);">Login</a>
                 <button class="mobile-menu-btn">
                     <i class="fa-solid fa-bars"></i>
                 </button>
@@ -46,53 +60,83 @@
     </nav>
 
     <!-- 1. SPLIT HERO SECTION -->
-    <header class="hero" style="background:var(--dark); color:#fff; padding-top:180px;">
-        <div class="container">
-            <div class="grid-2" style="align-items:center;">
-                <div class="hero-content" style="text-align:left;">
-                    <h1 style="color:#fff;">The Ultimate <br><span style="color:var(--primary)">SaaS Dashboard</span></h1>
-                    <p style="color:var(--gray);">Manage your personal brand like a true enterprise. AI-assisted workflows, real-time analytics, and seamless content approval.</p>
-                    <div class="hero-btns">
-                        <a href="dashboard.html" class="btn btn-primary">View Demo Dashboard</a>
-                    </div>
-                </div>
-                <div class="hero-img-wrap" style="transform:perspective(1000px) rotateY(-10deg);">
-                    <img src="assets/images/dashboard-mockup.png" alt="SaaS Dashboard" style="border:1px solid var(--border); box-shadow:0 20px 50px rgba(0,0,0,0.5);">
+    <header class="hero"
+        style="background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('assets/images/home2-hero.png') no-repeat center center / cover; color:#fff; padding: 150px 0; display: flex; align-items: center; justify-content: center; min-height: 100vh;">
+        <div class="container" style="display: flex; justify-content: center; width: 100%;">
+            <div class="hero-content" style="text-align:center; max-width:800px; margin:0;">
+                <h1 style="color:#fff; margin-bottom: 2rem;">The Ultimate <br><span style="color:var(--primary)">SaaS
+                        Dashboard</span></h1>
+                <p style="color:var(--gray); font-size: 1.25rem; margin-bottom: 2.5rem;">Manage your personal brand like
+                    a true enterprise. AI-assisted workflows, real-time analytics, and seamless content approval.</p>
+                <div class="hero-btns" style="display: flex; justify-content: center; gap: 1rem;">
+                    <a href="dashboard.html" class="btn btn-primary">View Demo Dashboard</a>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- 2. ANALYTICS DASHBOARD PREVIEW -->
-    <section class="section-padding">
+    <!-- 2. INTELLIGENT BRAND GROWTH ENGINE -->
+    <section class="section-padding" style="background:var(--bg-color);">
         <div class="container">
-            <div class="text-center">
-                <h2 class="section-title">Deep Analytics</h2>
-                <p class="section-subtitle">Track every impression, engagement, and conversion with precision.</p>
+            <div class="grid-2" style="align-items:center; gap:4rem;">
+                <div class="engine-info">
+                    <h2 class="section-title" style="margin-bottom:1.5rem;">Intelligent Brand <br>Growth Engine</h2>
+                    <p style="color:var(--gray); font-size:1.125rem; margin-bottom:2rem;">Our platform combines advanced data science with expert ghostwriting to ensure your personal brand grows with intent and precision.</p>
+                    
+                    <div style="display:grid; gap:1.5rem;">
+                        <div style="display:flex; gap:1.5rem;">
+                            <div style="width:50px; height:50px; border-radius:12px; background:var(--card-bg); color:var(--primary); display:flex; align-items:center; justify-content:center; flex-shrink:0; border:1px solid var(--border);">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom:0.25rem; color:var(--heading-color);">Predictive Analytics</h4>
+                                <p style="color:var(--gray); font-size:0.875rem;">Identify high-performing topics before they trend in your industry.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex; gap:1.5rem;">
+                            <div style="width:50px; height:50px; border-radius:12px; background:var(--card-bg); color:var(--primary); display:flex; align-items:center; justify-content:center; flex-shrink:0; border:1px solid var(--border);">
+                                <i class="fa-solid fa-users-viewfinder"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom:0.25rem; color:var(--heading-color);">Audience Insights</h4>
+                                <p style="color:var(--gray); font-size:0.875rem;">Deep dive into who is engaging with your content and why.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex; gap:1.5rem;">
+                            <div style="width:50px; height:50px; border-radius:12px; background:var(--card-bg); color:var(--primary); display:flex; align-items:center; justify-content:center; flex-shrink:0; border:1px solid var(--border);">
+                                <i class="fa-solid fa-rocket"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom:0.25rem; color:var(--heading-color);">Automated Scheduling</h4>
+                                <p style="color:var(--gray); font-size:0.875rem;">Publish at optimal times for maximum reach and engagement.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="engine-stats" style="position:relative;">
+                    <div style="background:var(--gradient); border-radius:2rem; padding:2.5rem; box-shadow:0 20px 50px rgba(108, 99, 255, 0.3); position:relative; overflow:hidden;">
+                        <div style="position:absolute; top:-50px; right:-50px; width:200px; height:200px; background:rgba(255,255,255,0.1); border-radius:50%;"></div>
+                        <h3 style="color:#fff; margin-bottom:1.5rem; position:relative;">Weekly Growth Report</h3>
+                        <div style="display:grid; gap:1rem; position:relative;">
+                            <div style="background:rgba(255,255,255,0.15); backdrop-filter:blur(5px); padding:1.25rem; border-radius:1.25rem; display:flex; justify-content:space-between; align-items:center; border:1px solid rgba(255,255,255,0.1);">
+                                <span style="color:#fff; font-weight:500;">New Followers</span>
+                                <span style="font-weight:800; color:#fff; font-size:1.25rem;">+1,240</span>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.15); backdrop-filter:blur(5px); padding:1.25rem; border-radius:1.25rem; display:flex; justify-content:space-between; align-items:center; border:1px solid rgba(255,255,255,0.1);">
+                                <span style="color:#fff; font-weight:500;">Engagement Rate</span>
+                                <span style="font-weight:800; color:#fff; font-size:1.25rem;">4.2%</span>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.15); backdrop-filter:blur(5px); padding:1.25rem; border-radius:1.25rem; display:flex; justify-content:space-between; align-items:center; border:1px solid rgba(255,255,255,0.1);">
+                                <span style="color:#fff; font-weight:500;">Post Reach</span>
+                                <span style="font-weight:800; color:#fff; font-size:1.25rem;">85.4k</span>
+                            </div>
+                        </div>
+                        <div style="margin-top:2rem; text-align:center;">
+                            <a href="dashboard.html" class="btn" style="background:#fff; color:var(--primary); width:100%; font-weight:700;">Open Dashboard</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="grid-4 mb-8">
-                <div class="card text-center" style="border-top:3px solid var(--primary);">
-                    <h4 style="color:var(--gray); font-weight:500;">Total Followers</h4>
-                    <h2 style="font-size:2.5rem; margin:0.5rem 0;">12.5k</h2>
-                    <span style="color:#10b981;"><i class="fa-solid fa-arrow-up"></i> 12% this month</span>
-                </div>
-                <div class="card text-center" style="border-top:3px solid var(--accent);">
-                    <h4 style="color:var(--gray); font-weight:500;">Engagement Rate</h4>
-                    <h2 style="font-size:2.5rem; margin:0.5rem 0;">4.8%</h2>
-                    <span style="color:#10b981;"><i class="fa-solid fa-arrow-up"></i> 2.1% this month</span>
-                </div>
-                <div class="card text-center" style="border-top:3px solid var(--primary);">
-                    <h4 style="color:var(--gray); font-weight:500;">Profile Views</h4>
-                    <h2 style="font-size:2.5rem; margin:0.5rem 0;">45.2k</h2>
-                    <span style="color:#10b981;"><i class="fa-solid fa-arrow-up"></i> 8% this week</span>
-                </div>
-                <div class="card text-center" style="border-top:3px solid var(--accent);">
-                    <h4 style="color:var(--gray); font-weight:500;">Inbound Leads</h4>
-                    <h2 style="font-size:2.5rem; margin:0.5rem 0;">142</h2>
-                    <span style="color:#10b981;"><i class="fa-solid fa-arrow-up"></i> 15% this month</span>
-                </div>
-            </div>
-            <img src="assets/images/dashboard-mockup.png" alt="Charts" style="border-radius:1rem; width:100%;">
         </div>
     </section>
 
@@ -100,29 +144,44 @@
     <section class="section-padding" style="background:var(--card-bg);">
         <div class="container">
             <div class="text-center">
-                <h2 class="section-title">Executive Onboarding Flow</h2>
-                <p class="section-subtitle">A streamlined process designed for busy founders.</p>
+                <h2 class="section-title">Elite Onboarding Flow</h2>
+                <p class="section-subtitle">A bespoke, 4-step process designed to launch your executive brand with zero friction.</p>
             </div>
             <div class="grid-4">
-                <div class="card text-center">
-                    <div style="width:60px; height:60px; border-radius:50%; background:var(--glass); color:var(--primary); display:flex; align-items:center; justify-content:center; font-size:1.5rem; margin:0 auto 1.5rem;">1</div>
+                <div class="card text-center workflow-card">
+                    <div class="step-icon-wrap" style="width:80px; height:80px; border-radius:24px; background:var(--bg-color); box-shadow:var(--shadow); display:flex; align-items:center; justify-content:center; margin:0 auto 2rem; position:relative; border:1px solid var(--border);">
+                        <span style="position:absolute; top:-10px; right:-10px; width:32px; height:32px; border-radius:50%; background:var(--gradient); color:#fff; display:flex; align-items:center; justify-content:center; font-size:0.875rem; font-weight:800; border:4px solid var(--card-bg);">1</span>
+                        <i class="fa-solid fa-magnifying-glass" style="font-size:1.75rem; color:var(--primary);"></i>
+                    </div>
                     <h3 class="card-title">Brand Audit</h3>
-                    <p class="card-text">We analyze your current presence and define your unique voice.</p>
+                    <p class="card-text">We analyze your current digital presence and extract your unique professional DNA.</p>
                 </div>
-                <div class="card text-center">
-                    <div style="width:60px; height:60px; border-radius:50%; background:var(--glass); color:var(--primary); display:flex; align-items:center; justify-content:center; font-size:1.5rem; margin:0 auto 1.5rem;">2</div>
+
+                <div class="card text-center workflow-card">
+                    <div class="step-icon-wrap" style="width:80px; height:80px; border-radius:24px; background:var(--bg-color); box-shadow:var(--shadow); display:flex; align-items:center; justify-content:center; margin:0 auto 2rem; position:relative; border:1px solid var(--border);">
+                        <span style="position:absolute; top:-10px; right:-10px; width:32px; height:32px; border-radius:50%; background:var(--gradient); color:#fff; display:flex; align-items:center; justify-content:center; font-size:0.875rem; font-weight:800; border:4px solid var(--card-bg);">2</span>
+                        <i class="fa-solid fa-chess" style="font-size:1.75rem; color:var(--primary);"></i>
+                    </div>
                     <h3 class="card-title">Strategy</h3>
-                    <p class="card-text">Building a 90-day content roadmap aligned with goals.</p>
+                    <p class="card-text">Building a high-impact content roadmap aligned with your business objectives.</p>
                 </div>
-                <div class="card text-center">
-                    <div style="width:60px; height:60px; border-radius:50%; background:var(--glass); color:var(--primary); display:flex; align-items:center; justify-content:center; font-size:1.5rem; margin:0 auto 1.5rem;">3</div>
+
+                <div class="card text-center workflow-card">
+                    <div class="step-icon-wrap" style="width:80px; height:80px; border-radius:24px; background:var(--bg-color); box-shadow:var(--shadow); display:flex; align-items:center; justify-content:center; margin:0 auto 2rem; position:relative; border:1px solid var(--border);">
+                        <span style="position:absolute; top:-10px; right:-10px; width:32px; height:32px; border-radius:50%; background:var(--gradient); color:#fff; display:flex; align-items:center; justify-content:center; font-size:0.875rem; font-weight:800; border:4px solid var(--card-bg);">3</span>
+                        <i class="fa-solid fa-pen-nib" style="font-size:1.75rem; color:var(--primary);"></i>
+                    </div>
                     <h3 class="card-title">Creation</h3>
-                    <p class="card-text">Our elite writers draft your posts via the platform.</p>
+                    <p class="card-text">Our elite writers draft high-authority posts that sound 100% like you.</p>
                 </div>
-                <div class="card text-center">
-                    <div style="width:60px; height:60px; border-radius:50%; background:var(--glass); color:var(--primary); display:flex; align-items:center; justify-content:center; font-size:1.5rem; margin:0 auto 1.5rem;">4</div>
+
+                <div class="card text-center workflow-card">
+                    <div class="step-icon-wrap" style="width:80px; height:80px; border-radius:24px; background:var(--bg-color); box-shadow:var(--shadow); display:flex; align-items:center; justify-content:center; margin:0 auto 2rem; position:relative; border:1px solid var(--border);">
+                        <span style="position:absolute; top:-10px; right:-10px; width:32px; height:32px; border-radius:50%; background:var(--gradient); color:#fff; display:flex; align-items:center; justify-content:center; font-size:0.875rem; font-weight:800; border:4px solid var(--card-bg);">4</span>
+                        <i class="fa-solid fa-circle-check" style="font-size:1.75rem; color:var(--primary);"></i>
+                    </div>
                     <h3 class="card-title">Approval</h3>
-                    <p class="card-text">One-click approval and automated publishing.</p>
+                    <p class="card-text">Review and approve with one click. We handle the distribution and analytics.</p>
                 </div>
             </div>
         </div>
@@ -134,15 +193,22 @@
             <div class="grid-2" style="align-items:center;">
                 <div>
                     <h2 class="section-title">Visual Content Calendar</h2>
-                    <p style="color:var(--gray); font-size:1.125rem; margin-bottom:2rem;">Never lose track of what's publishing next. Our intuitive drag-and-drop calendar gives you a bird's eye view of your entire content strategy.</p>
+                    <p style="color:var(--gray); font-size:1.125rem; margin-bottom:2rem;">Never lose track of what's
+                        publishing next. Our intuitive drag-and-drop calendar gives you a bird's eye view of your entire
+                        content strategy.</p>
                     <ul style="margin-bottom:2rem;">
-                        <li style="margin-bottom:1rem; display:flex; gap:1rem;"><i class="fa-solid fa-check" style="color:var(--primary); margin-top:0.25rem;"></i> Scheduled auto-publishing to LinkedIn & Twitter</li>
-                        <li style="margin-bottom:1rem; display:flex; gap:1rem;"><i class="fa-solid fa-check" style="color:var(--primary); margin-top:0.25rem;"></i> Easy one-click rescheduling</li>
-                        <li style="margin-bottom:1rem; display:flex; gap:1rem;"><i class="fa-solid fa-check" style="color:var(--primary); margin-top:0.25rem;"></i> Filter by content pillars and themes</li>
+                        <li style="margin-bottom:1rem; display:flex; gap:1rem;"><i class="fa-solid fa-check"
+                                style="color:var(--primary); margin-top:0.25rem;"></i> Scheduled auto-publishing to
+                            LinkedIn & Twitter</li>
+                        <li style="margin-bottom:1rem; display:flex; gap:1rem;"><i class="fa-solid fa-check"
+                                style="color:var(--primary); margin-top:0.25rem;"></i> Easy one-click rescheduling</li>
+                        <li style="margin-bottom:1rem; display:flex; gap:1rem;"><i class="fa-solid fa-check"
+                                style="color:var(--primary); margin-top:0.25rem;"></i> Filter by content pillars and
+                            themes</li>
                     </ul>
                 </div>
-                <div class="card" style="padding:1rem;">
-                    <img src="assets/images/blog-thumb.png" alt="Calendar" style="border-radius:0.5rem;">
+                <div class="card" style="padding:0; overflow:hidden;">
+                    <img src="assets/images/calendar-demo.png" alt="Calendar" style="width:100%; display:block;">
                 </div>
             </div>
         </div>
@@ -157,19 +223,23 @@
             </div>
             <div class="grid-4">
                 <div class="card">
-                    <h3 class="card-title"><i class="fa-solid fa-bullseye" style="color:var(--primary); margin-right:0.5rem;"></i> Tone</h3>
+                    <h3 class="card-title"><i class="fa-solid fa-bullseye"
+                            style="color:var(--primary); margin-right:0.5rem;"></i> Tone</h3>
                     <p class="card-text">Authoritative yet accessible. We capture your exact inflection.</p>
                 </div>
                 <div class="card">
-                    <h3 class="card-title"><i class="fa-solid fa-font" style="color:var(--primary); margin-right:0.5rem;"></i> Vocabulary</h3>
+                    <h3 class="card-title"><i class="fa-solid fa-font"
+                            style="color:var(--primary); margin-right:0.5rem;"></i> Vocabulary</h3>
                     <p class="card-text">Industry-specific jargon used correctly to establish expertise.</p>
                 </div>
                 <div class="card">
-                    <h3 class="card-title"><i class="fa-solid fa-layer-group" style="color:var(--primary); margin-right:0.5rem;"></i> Formatting</h3>
+                    <h3 class="card-title"><i class="fa-solid fa-layer-group"
+                            style="color:var(--primary); margin-right:0.5rem;"></i> Formatting</h3>
                     <p class="card-text">Optimized line breaks, bullet points, and hook structures.</p>
                 </div>
                 <div class="card">
-                    <h3 class="card-title"><i class="fa-solid fa-robot" style="color:var(--primary); margin-right:0.5rem;"></i> AI Guardrails</h3>
+                    <h3 class="card-title"><i class="fa-solid fa-robot"
+                            style="color:var(--primary); margin-right:0.5rem;"></i> AI Guardrails</h3>
                     <p class="card-text">Custom AI models trained specifically on your past writings.</p>
                 </div>
             </div>
@@ -180,8 +250,11 @@
     <section class="section-padding" style="background:var(--gradient); color:#fff; text-align:center;">
         <div class="container">
             <h2 style="font-size:3rem; margin-bottom:1.5rem; color:#fff;">Experience the Platform</h2>
-            <p style="font-size:1.25rem; max-width:600px; margin:0 auto 2.5rem; opacity:0.9;">Stop managing spreadsheets. Start managing your legacy. Book a walkthrough of the GhostWriter platform today.</p>
-            <a href="contact.html" class="btn" style="background:#fff; color:var(--primary); padding:1rem 2.5rem; font-size:1.125rem;">Book Executive Demo</a>
+            <p style="font-size:1.25rem; max-width:600px; margin:0 auto 2.5rem; opacity:0.9;">Stop managing
+                spreadsheets. Start managing your legacy. Book a walkthrough of the GhostWriter platform today.</p>
+            <a href="contact.html" class="btn"
+                style="background:#fff; color:var(--primary); padding:1rem 2.5rem; font-size:1.125rem;">Book Executive
+                Demo</a>
         </div>
     </section>
 
@@ -190,14 +263,16 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-widget">
-                    <a href="index.html" class="logo" style="color:#fff; margin-bottom:1.5rem;">
+                    <a href="index.html" class="logo" style="color:var(--heading-color); margin-bottom:1.5rem;">
                         <i class="fa-solid fa-pen-nib"></i>
                         Ghost<span style="color:var(--primary);">Writer</span>
                     </a>
-                    <p style="color:var(--gray); margin-bottom:1.5rem;">The premium platform for executive branding and content analytics.</p>
+                    <p style="color:var(--gray); margin-bottom:1.5rem;">The premium platform for executive branding and
+                        content analytics.</p>
                     <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
@@ -223,9 +298,12 @@
                 <div class="footer-widget">
                     <h3>Contact Us</h3>
                     <ul class="footer-links">
-                        <li style="color:var(--gray);"><i class="fa-solid fa-envelope" style="margin-right:0.5rem;"></i> hello@ghostwriter.com</li>
-                        <li style="color:var(--gray);"><i class="fa-solid fa-phone" style="margin-right:0.5rem;"></i> +1 (555) 123-4567</li>
-                        <li style="color:var(--gray);"><i class="fa-solid fa-location-dot" style="margin-right:0.5rem;"></i> 100 Innovation Drive, SF</li>
+                        <li style="color:var(--gray);"><i class="fa-solid fa-envelope" style="margin-right:0.5rem;"></i>
+                            hello@ghostwriter.com</li>
+                        <li style="color:var(--gray);"><i class="fa-solid fa-phone" style="margin-right:0.5rem;"></i> +1
+                            (555) 123-4567</li>
+                        <li style="color:var(--gray);"><i class="fa-solid fa-location-dot"
+                                style="margin-right:0.5rem;"></i> 100 Innovation Drive, SF</li>
                     </ul>
                 </div>
             </div>
@@ -237,4 +315,5 @@
 
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>
