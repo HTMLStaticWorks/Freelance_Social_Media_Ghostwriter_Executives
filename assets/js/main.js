@@ -120,7 +120,9 @@ document.addEventListener('DOMContentLoaded', () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const target = entry.target;
-          const endValue = parseInt(target.getAttribute('data-target'));
+          const targetStr = target.getAttribute('data-target');
+          const endValue = parseInt(targetStr);
+          const suffix = targetStr.replace(/[0-9]/g, '');
           let startValue = 0;
           const duration = 2000;
           const increment = endValue / (duration / 16);
@@ -128,10 +130,10 @@ document.addEventListener('DOMContentLoaded', () => {
           const updateCounter = () => {
             startValue += increment;
             if (startValue < endValue) {
-              target.innerText = Math.ceil(startValue);
+              target.innerText = Math.ceil(startValue) + suffix;
               requestAnimationFrame(updateCounter);
             } else {
-              target.innerText = endValue;
+              target.innerText = endValue + suffix;
             }
           };
 
