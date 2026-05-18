@@ -8,13 +8,13 @@
   --light: #ffffff;
   --dark: #0f172a;
   --text: #e5e7eb;
-  --gray: #94a3b8;
+  --gray: #000000;
   --border: #e2e8f0;
   --glass: rgba(255, 255, 255, 0.08);
   --shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
   --gradient: linear-gradient(135deg, #6c63ff, #8b5cf6);
   --bg-color: #ffffff;
-  --text-color: #334155;
+  --text-color: #000000;
   --heading-color: #0f172a;
   --card-bg: #f8fafc;
   --nav-bg: rgba(255, 255, 255, 0.85);
