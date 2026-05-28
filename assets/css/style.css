@@ -48,9 +48,31 @@ h5,
 h6 {
   color: var(--heading-color);
   font-family: 'Inter', sans-serif;
-  font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+h3 {
+  font-weight: 300;
+}
+
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+p,
+.section-subtitle {
+  font-weight: 500;
 }
 
 a {
@@ -124,6 +146,7 @@ select {
   margin-bottom: 1rem;
   background: var(--gradient);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
